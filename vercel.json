@@ -7,19 +7,19 @@
   "rewrites": [
     {
       "source": "/light/planos/comparar",
-      "destination": "/planos/comparar/index.html"
+      "destination": "/planos/comparar"
     },
     {
       "source": "/light/planos/comparar/",
-      "destination": "/planos/comparar/index.html"
+      "destination": "/planos/comparar"
     },
     {
       "source": "/light",
-      "destination": "/index.html"
+      "destination": "/"
     },
     {
       "source": "/light/",
-      "destination": "/index.html"
+      "destination": "/"
     },
     {
       "source": "/light/:path*",
