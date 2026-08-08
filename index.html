@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#04050e" />
+    <link rel="canonical" href="/" data-canonical />
+    <link rel="icon" type="image/png" href="assets/images/licitabase-icon.png" />
+    <meta
+      name="description"
+      content="Encontre, analise e organize licitações públicas em todo o Brasil com dados oficiais, inteligência e automação."
+    />
+    <meta property="og:title" content="Licitabase — Licitações com mais controle" />
+    <meta
+      property="og:description"
+      content="Monitore oportunidades, analise editais, compare preços e automatize etapas da disputa em um só lugar."
+    />
+    <title>Licitabase — Monitoramento de licitações públicas</title>
+    <script>
+      (() => {
+        const isLight = window.location.pathname === '/light' || window.location.pathname.startsWith('/light/');
+        const theme = isLight ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isLight ? '#F4F7F5' : '#04050E');
+        document.querySelector('[data-canonical]')?.setAttribute('href', '/');
+        window.__LICITABASE_THEME__ = theme;
+      })();
+      document.documentElement.classList.add('js');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('reduced-motion');
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pricing.css" />
+    <link rel="stylesheet" href="accessibility-typography.css" />
+    <link rel="stylesheet" href="theme-light.css" />
+    <script src="pricing-data.js" defer></script>
+    <script src="pricing.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="Página inicial do Licitabase">
+          <span class="brand-mark" aria-hidden="true"><img src="assets/images/licitabase-icon.png" alt="" width="2841" height="3301" /></span>
+          <span>Licitabase</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegação principal">
+          <a href="#top">Buscar licitações</a>
+          <a href="#features">Recursos</a>
+          <a href="#pricing">Planos</a>
+          <div class="pages-dropdown">
+            <button class="pages-trigger" type="button" aria-expanded="false" aria-controls="pages-menu">
+              Mais <svg class="chevron" aria-hidden="true" viewBox="0 0 12 8"><path d="m1 1 5 5 5-5" /></svg>
+            </button>
+            <div class="pages-menu" id="pages-menu" hidden>
+              <a href="#bot" hidden data-bot-link><span>Bot de lances</span><small>Automação com limites configuráveis</small></a>
+              <a href="#how"><span>Como funciona</span><small>Do perfil ao pipeline de oportunidades</small></a>
+              <a href="#faq-title"><span>Perguntas frequentes</span><small>Tire suas principais dúvidas</small></a>
+              <a href="#footer"><span>Entrar</span><small>Acesse sua conta Licitabase</small></a>
+            </div>
+          </div>
+        </nav>
+
+        <a class="button button-primary nav-cta" href="#trial">Criar conta grátis</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span><span class="sr-only">Abrir navegação</span>
+        </button>
+      </div>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel" hidden>
+        <a href="#top">Buscar licitações</a>
+        <a href="#features">Recursos</a>
+        <a href="#bot" hidden data-bot-link>Bot de lances</a>
+        <a href="#pricing">Planos</a>
+        <a href="#faq-title">Perguntas frequentes</a>
+        <a href="#footer">Entrar</a>
+        <a class="button button-primary" href="#trial">Criar conta grátis</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid container">
+          <div class="hero-copy">
+            <div class="announcement hero-load" data-load-delay="200"><span>Novidade</span> Inteligência e automação para licitações</div>
+            <h1 id="hero-title" class="hero-load" data-load-delay="200">Encontre as licitações certas.<br class="hero-break" /> Analise mais rápido.<br class="hero-break" /> Dispute com mais controle.</h1>
+            <p class="hero-intro hero-load" data-load-delay="400">Monitore oportunidades em todo o Brasil, receba editais alinhados ao seu negócio e gerencie suas participações em um só lugar.</p>
+            <div class="hero-actions hero-load" data-load-delay="600">
+              <a class="button button-primary" href="#trial">Criar conta grátis</a>
+              <a class="button button-secondary" href="#features">Buscar licitações grátis</a>
+            </div>
+            <div class="trusted hero-load" data-load-delay="600" aria-label="Dados oficiais e cobertura nacional">
+              <span class="trust-mark" aria-hidden="true">✓</span>
+              <div><span class="stars">Dados oficiais do PNCP</span><span>Cobertura nacional e mais de 15 filtros</span></div>
+            </div>
+          </div>
+          <div class="hero-visual hero-load" data-load-delay="1000" aria-label="Prévia visual do painel de oportunidades">
+            <img
+              src="assets/images/licitabase-dashboard-v2.png"
+              alt="Representação visual do painel de monitoramento do Licitabase"
+              width="1695"
+              height="1077"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="company-strip section-tight" aria-label="Fontes e plataformas integradas">
+        <div class="container">
+          <p>Dados oficiais e plataformas conectadas em um só ambiente</p>
+          <div class="logo-marquee" aria-hidden="true">
+            <div class="logo-track">
+              <div class="logo-sequence">
+                <span class="platform-logo">PNCP</span>
+                <span class="platform-logo">ComprasNet</span>
+                <span class="platform-logo">Licitanet</span>
+                <span class="platform-logo platform-logo--wide">Portal de Compras Públicas</span>
+                <span class="platform-logo">Cobertura nacional</span>
+              </div>
+              <div class="logo-sequence" aria-hidden="true">
+                <span class="platform-logo">PNCP</span>
+                <span class="platform-logo">ComprasNet</span>
+                <span class="platform-logo">Licitanet</span>
+                <span class="platform-logo platform-logo--wide">Portal de Compras Públicas</span>
+                <span class="platform-logo">Cobertura nacional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container surface about-panel reveal reveal-item">
+          <div class="eyebrow">Sobre o Licitabase</div>
+          <h2 id="about-title" class="about-copy" data-scroll-letters>
+            Uma operação de licitações mais simples, organizada e previsível.
+            <span>Em vez de depender de buscas manuais, planilhas separadas e diferentes portais, sua equipe encontra oportunidades, analisa editais, compara preços, acompanha prazos e automatiza etapas da disputa em um só ambiente.</span>
+          </h2>
+          <a class="button button-primary" href="#trial">Criar conta grátis</a>
+          <div class="stats" aria-label="Indicadores da plataforma">
+            <article class="stat-card stat-card--tenders">
+              <span class="stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" focusable="false">
+                  <path class="stat-icon__soft" d="M7.5 4.75h11l5 5v15.5a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2V6.75a2 2 0 0 1 2-2Z" />
+                  <path class="stat-icon__line" d="M18.5 4.75v5h5M9.5 13h8M9.5 17h5" />
+                  <circle class="stat-icon__focus" cx="20.5" cy="20.5" r="4" />
+                  <path class="stat-icon__line" d="m23.5 23.5 3 3" />
+                  <circle class="stat-icon__spark" cx="10" cy="9" r="1.5" />
+                </svg>
+              </span>
+              <div class="stat-value"><strong data-count="963">0</strong><span> mil+</span></div>
+              <p>Licitações disponíveis para pesquisa</p>
+            </article>
+            <article class="stat-card stat-card--coverage">
+              <span class="stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" focusable="false">
+                  <path class="stat-icon__soft" d="M6 8.5 12.5 5l7 3.5L26 5v18.5L19.5 27l-7-3.5L6 27V8.5Z" />
+                  <path class="stat-icon__line" d="M12.5 5v18.5M19.5 8.5V27" />
+                  <path class="stat-icon__focus" d="M20.25 9.25a4.25 4.25 0 1 0-8.5 0c0 3.1 4.25 7.25 4.25 7.25s4.25-4.15 4.25-7.25Z" />
+                  <circle class="stat-icon__spark" cx="16" cy="9.25" r="1.4" />
+                </svg>
+              </span>
+              <div class="stat-value"><strong data-count="27">0</strong><span> UFs</span></div>
+              <p>Cobertura nacional</p>
+            </article>
+            <article class="stat-card stat-card--filters">
+              <span class="stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" focusable="false">
+                  <path class="stat-icon__soft" d="M5 6.5h22l-8.25 9.25v7.5l-5.5 3v-10.5L5 6.5Z" />
+                  <path class="stat-icon__line" d="M5 6.5h22l-8.25 9.25v7.5l-5.5 3v-10.5L5 6.5Z" />
+                  <path class="stat-icon__line" d="M9 11h14M11.5 15h9" />
+                  <circle class="stat-icon__spark" cx="22.5" cy="9" r="1.5" />
+                </svg>
+              </span>
+              <div class="stat-value"><strong data-count="15">0</strong><span>+</span></div>
+              <p>Filtros para encontrar oportunidades</p>
+            </article>
+            <article class="stat-card stat-card--records">
+              <span class="stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" focusable="false">
+                  <ellipse class="stat-icon__soft" cx="11" cy="8" rx="6" ry="3" />
+                  <path class="stat-icon__line" d="M5 8v10c0 1.65 2.69 3 6 3 1.05 0 2.03-.14 2.88-.39M17 8v5" />
+                  <path class="stat-icon__line" d="M5 13c0 1.65 2.69 3 6 3 2.1 0 3.95-.55 5-1.38" />
+                  <path class="stat-icon__focus" d="M17 26V16h3v10M22 26V12h3v14M14 26h13" />
+                  <path class="stat-icon__spark" d="m18 9 3-3 2 2 4-4" />
+                </svg>
+              </span>
+              <div class="stat-value"><strong data-count="400">0</strong><span> mil+</span></div>
+              <p>Registros para comparação de preços</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="features section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <header class="section-heading reveal reveal-heading">
+            <div class="eyebrow">Recursos</div>
+            <h2 id="features-title">O que torna o Licitabase diferente</h2>
+            <p>Recursos para encontrar, analisar, organizar e disputar licitações com mais eficiência.</p>
+          </header>
+
+          <div class="feature-grid">
+            <article class="surface feature-card reveal reveal-item" data-reveal-delay="0">
+              <img src="assets/images/licitabase-search-flow-transparent.svg" data-light-src="/assets/images/licitabase-search-flow-light.svg" alt="Fluxo de busca de licitações por palavra-chave, categoria, localização, órgão público e prazo" loading="lazy" decoding="async" />
+              <h3>Feito para a rotina de quem participa de licitações</h3>
+              <p>Pesquise por palavra-chave, categoria, localização, modalidade, valor, órgão, plataforma e prazo.</p>
+            </article>
+            <article class="surface feature-card reveal reveal-item" data-reveal-delay="200">
+              <img src="assets/images/licitabase-unified-hub-transparent.svg" data-light-src="/assets/images/licitabase-unified-hub-light.svg" alt="Licitabase conectando oportunidades, participações, prazos e alertas em um ambiente único" loading="lazy" decoding="async" />
+              <h3>Dados organizados em um só ambiente</h3>
+              <p>Centralize oportunidades, participações, prazos, alertas e informações das plataformas conectadas.</p>
+            </article>
+            <article class="surface feature-card feature-wide reveal reveal-item" data-reveal-delay="400">
+              <div class="feature-quote">
+                <h3>Sempre atualizado com novas oportunidades</h3>
+                <blockquote>Receba diariamente uma seleção de licitações compatíveis com o perfil, o setor, a região e a capacidade de atendimento da sua empresa.</blockquote>
+                <div class="person"><span><strong>Atualização diária</strong><small>Dados oficiais do PNCP</small></span></div>
+              </div>
+              <img src="assets/images/licitabase-daily-opportunities-transparent.svg" data-light-src="/assets/images/licitabase-daily-opportunities-light.svg" alt="Dados oficiais do PNCP e perfil da empresa gerando uma seleção diária de oportunidades compatíveis" loading="lazy" decoding="async" />
+            </article>
+            <article class="surface feature-card reveal reveal-item" data-reveal-delay="600">
+              <img src="assets/images/licitabase-decision-intelligence-transparent.svg" data-light-src="/assets/images/licitabase-decision-intelligence-light.svg" alt="Painel de inteligência comparando preços e concorrentes, com score da oportunidade e análise do edital por IA" loading="lazy" decoding="async" />
+              <h3>Inteligência para tomar decisões</h3>
+              <p>Compare preços, analise concorrentes e consulte informações importantes dos editais com apoio de IA.</p>
+            </article>
+            <article class="surface feature-card orbit-card reveal reveal-item" data-reveal-delay="800">
+              <img class="platform-orbit-light" src="/assets/images/licitabase-portals-solar-system-light.svg" alt="PNCP, BLL, BNC, PCP, Compras.gov e Licitanet conectados ao Licitabase" loading="lazy" decoding="async" />
+              <svg class="platform-orbit-visual" viewBox="0 0 760 540" role="img" aria-labelledby="portal-orbit-title portal-orbit-desc">
+                <title id="portal-orbit-title">Sistema orbital de portais do Licitabase</title>
+                <desc id="portal-orbit-desc">PNCP, BLL, BNC, PCP, Compras.gov e Licitanet orbitam o núcleo central do Licitabase.</desc>
+                <style>
+                  .portal-orbit-motion { transform-box: view-box; transform-origin: 380px 270px; will-change: transform; }
+                  .portal-keep-upright { transform-box: fill-box; transform-origin: center; will-change: transform; }
+                  .portal-orbit-inner, .portal-orbit-middle, .portal-orbit-outer { animation: portal-orbit-clockwise 28s linear infinite; }
+                  .portal-orbit-inner .portal-keep-upright,
+                  .portal-orbit-middle .portal-keep-upright,
+                  .portal-orbit-outer .portal-keep-upright { animation: portal-orbit-counterclockwise 28s linear infinite; }
+                  @keyframes portal-orbit-clockwise { to { transform: rotate(360deg); } }
+                  @keyframes portal-orbit-counterclockwise { to { transform: rotate(-360deg); } }
+                  @media (prefers-reduced-motion: reduce) {
+                    .portal-orbit-motion, .portal-keep-upright { animation: none !important; }
+                  }
+                </style>
+                <defs>
+                  <radialGradient id="portal-solar-ambient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0" stop-color="#07b852" stop-opacity="0.18" />
+                    <stop offset="0.58" stop-color="#07b852" stop-opacity="0.05" />
+                    <stop offset="1" stop-color="#07b852" stop-opacity="0" />
+                  </radialGradient>
+                  <linearGradient id="portal-solar-surface" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#172029" stop-opacity="0.42" />
+                    <stop offset="0.5" stop-color="#0a1117" stop-opacity="0.32" />
+                    <stop offset="1" stop-color="#04090c" stop-opacity="0.24" />
+                  </linearGradient>
+                  <linearGradient id="portal-solar-hub" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0c4a2d" stop-opacity="0.76" />
+                    <stop offset="0.52" stop-color="#08261a" stop-opacity="0.64" />
+                    <stop offset="1" stop-color="#03100a" stop-opacity="0.48" />
+                  </linearGradient>
+                  <linearGradient id="portal-solar-glass" x1="0" y1="0" x2="0.82" y2="1">
+                    <stop offset="0" stop-color="#ffffff" stop-opacity="0.085" />
+                    <stop offset="0.32" stop-color="#ffffff" stop-opacity="0.018" />
+                    <stop offset="0.72" stop-color="#07b852" stop-opacity="0.03" />
+                    <stop offset="1" stop-color="#07b852" stop-opacity="0.05" />
+                  </linearGradient>
+                  <filter id="portal-solar-shadow" x="-30%" y="-70%" width="160%" height="240%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#000000" flood-opacity="0.22" />
+                  </filter>
+                  <filter id="portal-solar-glow" x="-80%" y="-80%" width="260%" height="260%">
+                    <feGaussianBlur stdDeviation="11" result="portal-core-blur" />
+                    <feFlood flood-color="#07b852" flood-opacity="0.3" />
+                    <feComposite in2="portal-core-blur" operator="in" />
+                    <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+                  </filter>
+                  <filter id="portal-solar-frost" x="-45%" y="-80%" width="190%" height="260%">
+                    <feGaussianBlur stdDeviation="25" />
+                  </filter>
+                </defs>
+
+                <g filter="url(#portal-solar-frost)" opacity="0.48" aria-hidden="true">
+                  <ellipse cx="380" cy="270" rx="205" ry="178" fill="#07b852" fill-opacity="0.17" />
+                  <ellipse cx="190" cy="150" rx="118" ry="42" fill="#16dc6b" fill-opacity="0.025" />
+                  <ellipse cx="575" cy="392" rx="126" ry="44" fill="#07b852" fill-opacity="0.03" />
+                </g>
+                <circle cx="380" cy="270" r="266" fill="url(#portal-solar-ambient)" />
+                <g fill="none" stroke="#07b852">
+                  <circle cx="380" cy="270" r="150" stroke-width="1" stroke-opacity="0.16" stroke-dasharray="3 9" />
+                  <circle cx="380" cy="270" r="178" stroke-width="0.9" stroke-opacity="0.11" stroke-dasharray="2 10" />
+                  <circle cx="380" cy="270" r="240" stroke-width="0.8" stroke-opacity="0.075" stroke-dasharray="2 11" />
+                </g>
+
+                <g class="portal-orbit-motion portal-orbit-inner">
+                  <g transform="translate(380 120)"><g class="portal-keep-upright" filter="url(#portal-solar-shadow)">
+                    <rect x="-64" y="-32" width="128" height="64" rx="32" fill="url(#portal-solar-surface)" stroke="#6b9e81" stroke-opacity="0.26" stroke-width="0.85" />
+                    <rect x="-62" y="-30" width="124" height="60" rx="30" fill="url(#portal-solar-glass)" />
+                    <text x="0" y="9" text-anchor="middle" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">PNCP</text>
+                  </g></g>
+                  <g transform="translate(380 420)"><g class="portal-keep-upright" filter="url(#portal-solar-shadow)">
+                    <rect x="-55" y="-31" width="110" height="62" rx="31" fill="url(#portal-solar-surface)" stroke="#6b9e81" stroke-opacity="0.26" stroke-width="0.85" />
+                    <rect x="-53" y="-29" width="106" height="58" rx="29" fill="url(#portal-solar-glass)" />
+                    <text x="0" y="9" text-anchor="middle" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">BLL</text>
+                  </g></g>
+                </g>
+
+                <g class="portal-orbit-motion portal-orbit-middle">
+                  <g transform="translate(534 181)"><g class="portal-keep-upright" filter="url(#portal-solar-shadow)">
+                    <rect x="-60" y="-31" width="120" height="62" rx="31" fill="url(#portal-solar-surface)" stroke="#6b9e81" stroke-opacity="0.24" stroke-width="0.85" />
+                    <rect x="-58" y="-29" width="116" height="58" rx="29" fill="url(#portal-solar-glass)" />
+                    <text x="0" y="9" text-anchor="middle" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">BNC</text>
+                  </g></g>
+                  <g transform="translate(226 359)"><g class="portal-keep-upright" filter="url(#portal-solar-shadow)">
+                    <rect x="-60" y="-31" width="120" height="62" rx="31" fill="url(#portal-solar-surface)" stroke="#6b9e81" stroke-opacity="0.24" stroke-width="0.85" />
+                    <rect x="-58" y="-29" width="116" height="58" rx="29" fill="url(#portal-solar-glass)" />
+                    <text x="0" y="9" text-anchor="middle" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">PCP</text>
+                  </g></g>
+                </g>
+
+                <g class="portal-orbit-motion portal-orbit-outer">
+                  <g transform="translate(172 150)"><g class="portal-keep-upright" filter="url(#portal-solar-shadow)">
+                    <rect x="-107" y="-33" width="214" height="66" rx="33" fill="url(#portal-solar-surface)" stroke="#6b9e81" stroke-opacity="0.22" stroke-width="0.8" />
+                    <rect x="-105" y="-31" width="210" height="62" rx="31" fill="url(#portal-solar-glass)" />
+                    <text x="0" y="9" text-anchor="middle" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="25" font-weight="600">Compras.gov</text>
+                  </g></g>
+                  <g transform="translate(588 390)"><g class="portal-keep-upright" filter="url(#portal-solar-shadow)">
+                    <rect x="-84" y="-32" width="168" height="64" rx="32" fill="url(#portal-solar-surface)" stroke="#6b9e81" stroke-opacity="0.22" stroke-width="0.8" />
+                    <rect x="-82" y="-30" width="164" height="60" rx="30" fill="url(#portal-solar-glass)" />
+                    <text x="0" y="9" text-anchor="middle" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600">Licitanet</text>
+                  </g></g>
+                </g>
+
+                <g filter="url(#portal-solar-glow)">
+                  <circle cx="380" cy="270" r="88" fill="none" stroke="#07b852" stroke-opacity="0.2" stroke-width="1.5" />
+                  <circle cx="380" cy="270" r="76" fill="url(#portal-solar-hub)" stroke="#17dc69" stroke-opacity="0.82" stroke-width="1.3" />
+                  <circle cx="380" cy="270" r="73" fill="url(#portal-solar-glass)" stroke="#ffffff" stroke-opacity="0.055" stroke-width="0.6" />
+                  <circle cx="380" cy="270" r="61" fill="#06100b" fill-opacity="0.54" stroke="#07b852" stroke-opacity="0.38" />
+                  <image href="assets/images/licitabase-icon.png" x="342" y="226" width="76" height="88" preserveAspectRatio="xMidYMid meet" />
+                </g>
+              </svg>
+              <h3>Integração com plataformas de licitação</h3>
+              <p>Conecte ComprasNet, Licitanet e Portal de Compras Públicas para acompanhar participações sincronizadas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-section" id="how" aria-labelledby="how-title">
+        <div class="container">
+          <header class="section-heading how-heading reveal reveal-heading">
+            <div class="eyebrow">Como funciona</div>
+            <h2 id="how-title">Como o Licitabase funciona</h2>
+            <p>Configure o perfil da sua empresa uma única vez e receba diariamente oportunidades compatíveis.</p>
+          </header>
+        </div>
+        <div class="workflow-scroll">
+          <div class="how-sticky" id="step-trigger-activate">
+            <div class="container">
+            <div class="step-line" aria-hidden="true">
+              <span>01</span><span>02</span><span>03</span><i></i>
+            </div>
+            <div class="how-window">
+              <div class="how-track" data-how-track>
+                <div class="how-mobile-timeline" data-how-mobile-timeline aria-hidden="true"><i></i></div>
+                <article class="how-card">
+                  <span class="how-card__step" aria-hidden="true">01</span>
+                  <h3>Defina o que procura</h3>
+                  <div class="surface process-card"><img src="assets/illustrations/how/how-01-filtros.svg" data-light-src="/assets/illustrations/how/how-01-filtros-light.svg" alt="Painel visual com categoria, região, modalidade e faixa de valor configurados no perfil da empresa" width="640" height="590" loading="lazy" decoding="async" /></div>
+                  <p>Selecione categorias, regiões, modalidades, valores e outros critérios importantes para sua operação.</p>
+                </article>
+                <article class="how-card">
+                  <span class="how-card__step" aria-hidden="true">02</span>
+                  <h3>Receba novas oportunidades</h3>
+                  <div class="surface process-card"><img src="assets/illustrations/how/how-02-oportunidades.svg" data-light-src="/assets/illustrations/how/how-02-oportunidades-light.svg" alt="Fluxo visual de portais oficiais monitorados pelo Licitabase com oportunidades organizadas por compatibilidade" width="640" height="590" loading="lazy" decoding="async" /></div>
+                  <p>O Licitabase monitora as publicações e organiza as licitações mais relevantes para você.</p>
+                </article>
+                <article class="how-card">
+                  <span class="how-card__step" aria-hidden="true">03</span>
+                  <h3>Monte seu pipeline</h3>
+                  <div class="surface process-card"><img src="assets/illustrations/how/how-03-pipeline.svg" data-light-src="/assets/illustrations/how/how-03-pipeline-light.svg" alt="Pipeline visual com oportunidades nas etapas de análise, aprovação e disputa" width="640" height="590" loading="lazy" decoding="async" /></div>
+                  <p>Analise, aprove ou descarte cada oportunidade e acompanhe as melhores até a disputa.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="workflow-triggers" aria-hidden="true">
+            <div class="workflow-trigger" id="step-trigger-1"></div>
+            <div class="workflow-trigger" id="step-trigger-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages command-center section" id="funcionalidades" aria-labelledby="advantages-title" data-command-center>
+        <div class="command-center__ambient" aria-hidden="true"></div>
+        <div class="container command-center__container">
+          <header class="section-heading command-center__heading reveal reveal-heading">
+            <div class="eyebrow">Centro de comando</div>
+            <h2 id="advantages-title">Da descoberta ao resultado, tudo em um só lugar</h2>
+            <p>Conecte plataformas, acompanhe oportunidades e tome decisões com mais contexto, sem depender de planilhas separadas.</p>
+          </header>
+
+          <div class="command-tabs-shell reveal reveal-item" data-reveal-delay="100">
+            <div class="command-tabs" role="tablist" aria-label="Áreas do Licitabase" data-command-tabs>
+              <button class="command-tab is-active" id="command-tab-explorar" type="button" role="tab" aria-selected="true" aria-controls="command-panel" tabindex="0" data-command-tab="explorar">
+                <span class="command-tab__icon" data-command-icon="nav-explore" aria-hidden="true"></span>
+                <span>Explorar Licitações</span>
+              </button>
+              <button class="command-tab" id="command-tab-operacao" type="button" role="tab" aria-selected="false" aria-controls="command-panel" tabindex="-1" data-command-tab="operacao">
+                <span class="command-tab__icon" data-command-icon="nav-operation" aria-hidden="true"></span>
+                <span>Minha Operação</span>
+              </button>
+              <button class="command-tab" id="command-tab-inteligencia" type="button" role="tab" aria-selected="false" aria-controls="command-panel" tabindex="-1" data-command-tab="inteligencia">
+                <span class="command-tab__icon" data-command-icon="nav-intelligence" aria-hidden="true"></span>
+                <span>Inteligência</span>
+              </button>
+              <button class="command-tab" id="command-tab-gestao" type="button" role="tab" aria-selected="false" aria-controls="command-panel" tabindex="-1" data-command-tab="gestao">
+                <span class="command-tab__icon" data-command-icon="nav-management" aria-hidden="true"></span>
+                <span>Gestão</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="command-panel-wrap reveal reveal-item" data-reveal-delay="200">
+            <div class="command-panel" id="command-panel" role="tabpanel" aria-labelledby="command-tab-explorar" tabindex="0" data-command-panel>
+              <header class="command-panel__heading">
+                <h3 data-command-title>Encontre oportunidades com mais precisão</h3>
+                <p data-command-description>Pesquise novas licitações, explore áreas de interesse e reutilize critérios importantes para reduzir o tempo gasto procurando oportunidade por oportunidade.</p>
+              </header>
+              <div class="command-grid" data-command-grid data-layout="explorar"></div>
+            </div>
+          </div>
+
+          <div class="command-actions reveal reveal-item" data-reveal-delay="300">
+            <a class="button button-primary" href="#trial">Criar conta grátis</a>
+            <a class="button button-secondary" href="#bot" hidden data-bot-link>Conhecer o bot de lances</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section" id="bot" aria-labelledby="testimonials-title" hidden data-temporarily-hidden>
+        <div class="container surface testimonial-panel reveal reveal-side">
+          <header class="section-heading">
+            <div class="eyebrow">Bot de lances</div>
+            <h2 id="testimonials-title">Seus lances continuam enquanto você foca em outras oportunidades</h2>
+            <p>Você define a estratégia, o piso e as regras. O bot opera somente dentro dos limites configurados.</p>
+          </header>
+          <div class="testimonial-stage" aria-live="polite">
+            <div class="testimonial-track">
+            <article class="testimonial-card" data-testimonial>
+              <h3>Automação com controle</h3>
+              <p>O bot monitora a sala de disputa, identifica o início da etapa competitiva e executa a estratégia definida pela sua empresa.</p>
+              <div class="person"><span><strong>Você define as regras</strong><small>O bot respeita os limites configurados</small></span></div>
+            </article>
+            <article class="testimonial-card" data-testimonial>
+              <h3>Estratégias sob seu controle</h3>
+              <p>Configure decremento fixo, percentual ou preço-alvo. Ajuste a estratégia de acordo com cada oportunidade.</p>
+              <div class="person"><span><strong>Configuração flexível</strong><small>Estratégia adequada a cada disputa</small></span></div>
+            </article>
+            <article class="testimonial-card" data-testimonial>
+              <h3>Entrada automática na disputa</h3>
+              <p>Quando a etapa competitiva começa, o bot acessa a sala e inicia a estratégia configurada sem exigir acompanhamento manual contínuo.</p>
+              <div class="person"><span><strong>Monitoramento da sala</strong><small>Execução no momento configurado</small></span></div>
+            </article>
+            <article class="testimonial-card" data-testimonial>
+              <h3>Limites de segurança</h3>
+              <p>Defina um piso absoluto ou percentual para impedir que o bot envie lances abaixo do valor mínimo permitido.</p>
+              <div class="person"><span><strong>Piso mínimo configurável</strong><small>Mais previsibilidade durante a disputa</small></span></div>
+            </article>
+            <article class="testimonial-card" data-testimonial>
+              <h3>Principais plataformas</h3>
+              <p>Use o bot no ComprasNet, Licitanet e Portal de Compras Públicas. BNC Compras e BLL Compras estão em desenvolvimento.</p>
+              <div class="person"><span><strong>Integrações disponíveis</strong><small>Novas plataformas em breve</small></span></div>
+            </article>
+            </div>
+          </div>
+          <div class="testimonial-dots" role="group" aria-label="Selecionar recurso do bot"></div>
+        </div>
+      </section>
+
+      <section class="pricing-section pricing-suite section" id="pricing" aria-labelledby="pricing-title" data-pricing-root data-pricing-mode="cards">
+        <div class="container pricing-suite__container">
+          <header class="section-heading reveal reveal-heading">
+            <div class="eyebrow">Planos</div>
+            <h2 id="pricing-title">Escolha o nível de operação ideal para sua empresa</h2>
+            <p>Comece monitorando oportunidades e evolua para integrações e automações conforme sua operação crescer.</p>
+          </header>
+          <fieldset class="pricing-cycle reveal reveal-item" data-reveal-delay="80">
+            <legend class="sr-only">Escolha o ciclo de cobrança</legend>
+            <div class="pricing-cycle__control" role="group" aria-label="Ciclo de cobrança">
+              <button class="is-active" type="button" data-pricing-cycle="monthly" aria-pressed="true">Mensal</button>
+              <button type="button" data-pricing-cycle="annual" aria-pressed="false">Anual <span class="pricing-cycle__saving">Economize até 17%</span></button>
+            </div>
+          </fieldset>
+          <div class="pricing-cards" data-pricing-cards></div>
+          <div class="pricing-compare-link-wrap reveal reveal-item" data-reveal-delay="360">
+            <a class="pricing-compare-link" href="/planos/comparar?ciclo=monthly" data-comparison-link>
+              <span class="pricing-compare-link__icon">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3v18M6 6h12M5 6l-3 6h6L5 6ZM19 6l-3 6h6l-3-6ZM3 12a3 3 0 0 0 5 0M16 12a3 3 0 0 0 6 0M8 21h8" /></svg>
+              </span>
+              <span>Comparar todos os recursos dos planos</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14M14 7l5 5-5 5" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section section-tight" id="final-cta" aria-labelledby="cta-title">
+        <div class="container surface cta-panel reveal reveal-side">
+          <div class="cta-visual"><img src="assets/images/licitabase-command-console-v2.png" data-light-src="/assets/images/licitabase-command-console-light.png" alt="Ícone oficial do Licitabase em um painel de comando para busca, análise, segurança e automação de licitações" loading="lazy" decoding="async" /></div>
+          <div class="cta-copy">
+            <h2 id="cta-title">Pronto para organizar sua operação de licitações?</h2>
+            <p>Encontre oportunidades compatíveis, organize participações e automatize etapas da operação em um só lugar.</p>
+            <a class="button button-primary" href="#trial">Criar conta grátis</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="faq-heading reveal reveal-heading">
+            <div class="eyebrow">Perguntas frequentes</div>
+            <h2 id="faq-title">Tire suas dúvidas sobre o Licitabase</h2>
+            <p>Entenda como funcionam os dados, os filtros, as integrações e a automação de lances.</p>
+          </header>
+          <div class="faq-grid">
+            <div>
+              <details open><summary>O que é o Licitabase?</summary><p>O Licitabase é uma plataforma para buscar, analisar, organizar e acompanhar licitações públicas em todo o Brasil, com recursos de inteligência, integrações e automação.</p></details>
+              <details><summary>De onde vêm os dados das licitações?</summary><p>As oportunidades são coletadas de fontes oficiais, incluindo o PNCP. Os dados de busca são atualizados diariamente.</p></details>
+              <details><summary>Posso pesquisar antes de criar uma conta?</summary><p>Sim. Você pode realizar uma busca e visualizar uma prévia dos resultados antes de se cadastrar.</p></details>
+              <details><summary>Preciso pagar para começar?</summary><p>Não. A criação da conta é gratuita. Os recursos disponíveis depois variam conforme o plano contratado.</p></details>
+            </div>
+            <div>
+              <details open><summary>Como encontro licitações do meu setor?</summary><p>Pesquise por palavras-chave ou combine filtros como categoria, localização, modalidade, valor, órgão, plataforma e data da disputa.</p></details>
+              <details><summary>O Licitabase participa pela minha empresa?</summary><p>Não. A plataforma apoia e automatiza partes da operação, mas sua empresa continua responsável pelas análises, documentos e decisões.</p></details>
+              <details><summary>O bot pode dar um lance abaixo do limite?</summary><p>Não, desde que o piso esteja configurado corretamente. O bot executa os lances somente dentro das regras definidas.</p></details>
+              <details><summary>Quais plataformas podem ser conectadas?</summary><p>ComprasNet, Licitanet e Portal de Compras Públicas. BNC Compras e BLL Compras estão previstas para uma etapa futura.</p></details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <section class="trial container" id="trial" aria-labelledby="trial-title">
+        <div><div class="eyebrow pill"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z" /></svg>Comece gratuitamente</div><h2 id="trial-title">Transforme licitações em um processo mais previsível</h2><p>Crie sua conta e configure seus primeiros alertas em poucos minutos.</p></div>
+        <form class="subscribe-form" novalidate>
+          <label class="sr-only" for="email">Seu melhor e-mail</label>
+          <div class="input-shell"><input id="email" name="email" type="email" placeholder="Digite seu e-mail" autocomplete="email" required /><button class="button button-primary" type="submit">Criar conta grátis</button></div>
+          <div class="form-note"><span>Conta gratuita para começar</span><span>Dados oficiais do PNCP</span></div>
+          <p class="form-status" role="status"></p>
+        </form>
+      </section>
+      <div class="container footer-grid">
+        <div class="footer-brand"><a class="brand brand-large" href="#top"><span class="brand-mark" aria-hidden="true"><img src="assets/images/licitabase-icon.png" alt="" width="2841" height="3301" /></span><span>Licitabase</span></a><p>Monitoramento, inteligência e automação para empresas que participam de licitações públicas.</p></div>
+        <div><h3>Plataforma</h3><a href="#top">Buscar licitações</a><a href="#features">Categorias e filtros</a><a href="#features">Itens e preços</a><a href="#features">Concorrentes</a><a href="#bot" hidden data-bot-link>Bot de lances</a><a href="#pricing">Planos</a></div>
+        <div><h3>Recursos</h3><a href="#features">Alertas de oportunidades</a><a href="#features">Leitura de editais com IA</a><a href="#features">Comparação de preços</a><a href="#advantages-title">Gestão de prazos</a><a href="#how">Pipeline de licitações</a></div>
+        <div><h3>Empresa</h3><a href="#footer">Entrar</a><a href="#trial">Criar conta</a><a href="#faq-title">Central de ajuda</a><a href="#footer">Termos de uso</a><a href="#footer">Política de privacidade</a></div>
+      </div>
+      <div class="container footer-bottom"><p>©<span data-current-year></span> Licitabase. Todos os direitos reservados.</p><div><span>Dados oficiais do PNCP</span><span>Cobertura nacional</span><span>Conta gratuita</span></div></div>
+    </footer>
+  </body>
+</html>

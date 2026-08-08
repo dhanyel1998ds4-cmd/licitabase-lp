@@ -1,0 +1,83 @@
+<svg data-theme-asset="light" xmlns="http://www.w3.org/2000/svg" width="640" height="590" viewBox="0 0 640 590" fill="none">
+  <defs>
+    <linearGradient id="panel" x1="48" y1="124" x2="592" y2="454" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#F8FBF9" stop-opacity=".98"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#F1F6F3" stop-opacity=".94"/>
+    </linearGradient>
+    <linearGradient id="status" x1="196" y1="482" x2="444" y2="548" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF7EF"/>
+      <stop offset="1" stop-color="#F5F9F6"/>
+    </linearGradient>
+    <filter id="shadow" x="28" y="104" width="584" height="390" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#173A29" flood-opacity=".10"/>
+    </filter>
+    <style>
+      @font-face{font-family:Poppins;src:url('../../fonts/poppins-400.ttf') format('truetype');font-weight:400}
+      @font-face{font-family:Poppins;src:url('../../fonts/poppins-600.ttf') format('truetype');font-weight:600}
+      text{font-family:Poppins,Arial,sans-serif}
+      .title{fill:#102018;font-size:30px;font-weight:600}
+      .secondary{fill:#5B6961;font-size:24px;font-weight:400}
+      .chip-label{fill:#102018;font-size:27px;font-weight:500}
+      .icon{stroke:#07B852;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <path d="M118 64H294M346 64H522" stroke="#94A099" stroke-width="2" stroke-dasharray="6 8"/>
+  <circle cx="88" cy="64" r="29" fill="#F1F7F3" stroke="#07B852" stroke-opacity=".4"/>
+  <path class="icon" d="M78 72c1.5-7 4.8-10.5 10-10.5S96.5 65 98 72M82.5 55a5.5 5.5 0 1 0 11 0 5.5 5.5 0 0 0-11 0Z"/>
+  <circle cx="320" cy="64" r="27" fill="#E7F4EB" stroke="#07B852" stroke-opacity=".7"/>
+  <path class="icon" d="M309 57h22l-8 9v7l-6 3V66l-8-9Z"/>
+  <circle cx="552" cy="64" r="29" fill="#F1F7F3" stroke="#07B852" stroke-opacity=".4"/>
+  <path d="m541 64 7 7 15-17" stroke="#21D46A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="124" width="544" height="330" rx="28" fill="url(#panel)"/>
+    <rect x="48.75" y="124.75" width="542.5" height="328.5" rx="27.25" stroke="#07B852" stroke-opacity=".3" stroke-width="1.5"/>
+  </g>
+  <rect x="76" y="150" width="58" height="58" rx="17" fill="#07B852" fill-opacity=".1" stroke="#07B852" stroke-opacity=".24"/>
+  <path class="icon" d="M90 168h30M95 179h20M100 190h10"/>
+  <circle cx="115" cy="168" r="3.5" fill="#21D46A"/>
+  <circle cx="100" cy="179" r="3.5" fill="#21D46A"/>
+  <circle cx="105" cy="190" r="3.5" fill="#21D46A"/>
+  <text x="154" y="177" class="title">Perfil da empresa</text>
+  <text x="154" y="208" class="secondary">Critérios da operação</text>
+  <path d="M76 228H564" stroke="#8CA097" stroke-opacity=".1"/>
+
+  <g>
+    <rect x="76" y="248" width="266" height="76" rx="18" fill="url(#chip)" stroke="#FFFFFF" stroke-opacity=".07"/>
+    <rect x="90" y="262" width="48" height="48" rx="14" fill="#07B852" fill-opacity=".09"/>
+    <path class="icon" d="m102 275 12-6 12 6-12 6-12-6Zm0 8 12 6 12-6M102 291l12 6 12-6"/>
+    <text x="154" y="295" class="chip-label">Categoria</text>
+  </g>
+  <g>
+    <rect x="358" y="248" width="206" height="76" rx="18" fill="url(#chip)" stroke="#FFFFFF" stroke-opacity=".07"/>
+    <rect x="372" y="262" width="48" height="48" rx="14" fill="#07B852" fill-opacity=".09"/>
+    <path class="icon" d="M396 299s11-10.2 11-18.5a11 11 0 1 0-22 0c0 8.3 11 18.5 11 18.5Z"/>
+    <circle cx="396" cy="280.5" r="3.5" fill="#21D46A"/>
+    <text x="436" y="295" class="chip-label">Região</text>
+  </g>
+  <g>
+    <rect x="76" y="340" width="266" height="76" rx="18" fill="url(#chip)" stroke="#FFFFFF" stroke-opacity=".07"/>
+    <rect x="90" y="354" width="48" height="48" rx="14" fill="#07B852" fill-opacity=".09"/>
+    <path class="icon" d="M102 364h24v27h-24zM108 364v-5h12v5M108 373h12M108 382h8"/>
+    <text x="154" y="387" class="chip-label">Modalidade</text>
+  </g>
+  <g>
+    <rect x="358" y="340" width="206" height="76" rx="18" fill="url(#chip)" stroke="#FFFFFF" stroke-opacity=".07"/>
+    <rect x="372" y="354" width="48" height="48" rx="14" fill="#07B852" fill-opacity=".09"/>
+    <path class="icon" d="M381 378h30M386 365v26M406 365v26"/>
+    <circle cx="386" cy="371" r="3.5" fill="#21D46A"/>
+    <circle cx="406" cy="385" r="3.5" fill="#21D46A"/>
+    <text x="436" y="387" class="chip-label">Valor</text>
+  </g>
+
+  <path d="M320 454v28" stroke="#07B852" stroke-width="2" stroke-dasharray="5 6"/>
+  <rect x="196" y="482" width="248" height="66" rx="22" fill="url(#status)" stroke="#07B852" stroke-opacity=".56" stroke-width="1.5"/>
+  <circle cx="231" cy="515" r="16" fill="#07B852"/>
+  <path d="m224 515 5 5 10-12" stroke="#03100A" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="258" y="524" fill="#102018" font-size="27" font-weight="600">Perfil salvo</text>
+</svg>

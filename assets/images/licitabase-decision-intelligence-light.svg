@@ -1,0 +1,131 @@
+<svg data-theme-asset="light" xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540" role="img" aria-labelledby="title desc">
+  <title id="title">Inteligência para decisões em licitações</title>
+  <desc id="desc">Painel que compara preços e concorrência, calcula o score da oportunidade e analisa critérios do edital com inteligência artificial.</desc>
+
+  <defs>
+    <linearGradient id="intel-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.44" />
+      <stop offset="0.52" stop-color="#F1F6F3" stop-opacity="0.34" />
+      <stop offset="1" stop-color="#F8FBF9" stop-opacity="0.26" />
+    </linearGradient>
+    <linearGradient id="intel-green-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#067A39" stop-opacity="0.8" />
+      <stop offset="0.58" stop-color="#E5F4EA" stop-opacity="0.66" />
+      <stop offset="1" stop-color="#EDF7F1" stop-opacity="0.52" />
+    </linearGradient>
+    <linearGradient id="intel-sheen" x1="0" y1="0" x2="0.84" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.085" />
+      <stop offset="0.3" stop-color="#FFFFFF" stop-opacity="0.018" />
+      <stop offset="0.72" stop-color="#07b852" stop-opacity="0.03" />
+      <stop offset="1" stop-color="#07b852" stop-opacity="0.055" />
+    </linearGradient>
+    <linearGradient id="intel-line-green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#07b852" />
+      <stop offset="1" stop-color="#52e98f" />
+    </linearGradient>
+    <linearGradient id="intel-line-gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d8bd53" stop-opacity="0.68" />
+      <stop offset="1" stop-color="#f0dd78" stop-opacity="0.92" />
+    </linearGradient>
+    <filter id="intel-shadow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#173A29" flood-opacity="0.22" />
+    </filter>
+    <filter id="intel-glow" x="-50%" y="-80%" width="200%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="blur" />
+      <feFlood flood-color="#16dc6b" flood-opacity="0.32" />
+      <feComposite in2="blur" operator="in" />
+      <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <filter id="intel-frost" x="-45%" y="-80%" width="190%" height="260%">
+      <feGaussianBlur stdDeviation="28" />
+    </filter>
+    <filter id="intel-score-glow" x="-45%" y="-45%" width="190%" height="190%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#173A29" flood-opacity="0.3" />
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#07b852" flood-opacity="0.24" />
+    </filter>
+  </defs>
+
+  <g filter="url(#intel-frost)" opacity="0.5" aria-hidden="true">
+    <ellipse cx="310" cy="260" rx="260" ry="118" fill="#07b852" fill-opacity="0.045" />
+    <ellipse cx="744" cy="210" rx="118" ry="138" fill="#16dc6b" fill-opacity="0.17" />
+    <ellipse cx="706" cy="430" rx="158" ry="66" fill="#07b852" fill-opacity="0.035" />
+  </g>
+
+  <g filter="url(#intel-shadow)">
+    <rect x="24" y="24" width="872" height="492" rx="38" fill="url(#intel-glass)" stroke="#6C9880" stroke-opacity="0.2" stroke-width="0.8" />
+    <rect x="27" y="27" width="866" height="486" rx="35" fill="url(#intel-sheen)" />
+  </g>
+
+  <g font-family="Poppins, Segoe UI, Arial, sans-serif">
+    <text x="68" y="82" fill="#102018" font-size="25" font-weight="650">Inteligência de decisão</text>
+    <text x="68" y="111" fill="#66736B" font-size="15">Dados da oportunidade atualizados</text>
+
+    <g transform="translate(512 58)">
+      <circle cx="12" cy="12" r="5" fill="#16dc6b" />
+      <text x="28" y="18" fill="#102018" font-size="16" font-weight="500">Preço de referência</text>
+    </g>
+    <g transform="translate(700 58)">
+      <circle cx="12" cy="12" r="5" fill="#d8bd53" />
+      <text x="28" y="18" fill="#102018" font-size="16" font-weight="500">Concorrência</text>
+    </g>
+  </g>
+
+  <g font-family="Poppins, Segoe UI, Arial, sans-serif">
+    <g fill="none" stroke="#6C9880" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 9">
+      <path d="M96 166H624" />
+      <path d="M96 232H624" />
+      <path d="M96 298H624" />
+      <path d="M96 364H624" />
+    </g>
+    <g fill="#66736B" font-size="15">
+      <text x="58" y="171">100</text>
+      <text x="66" y="237">80</text>
+      <text x="66" y="303">60</text>
+      <text x="66" y="369">40</text>
+    </g>
+
+    <path d="M96 346C142 276 182 238 228 260S318 333 378 306 462 189 520 182 582 220 624 242" fill="none" stroke="url(#intel-line-green)" stroke-width="3" stroke-linecap="round" opacity="0.58" />
+    <path d="M96 212C145 150 188 190 232 225S316 290 376 316 474 342 528 286 588 218 624 160" fill="none" stroke="url(#intel-line-gold)" stroke-width="2.6" stroke-linecap="round" opacity="0.46" />
+
+    <g opacity="0.68">
+      <circle cx="378" cy="306" r="10" fill="#F5F9F6" stroke="#067A39" stroke-width="3" />
+      <circle cx="378" cy="306" r="3.5" fill="#FFFFFF" />
+    </g>
+
+    <g filter="url(#intel-shadow)">
+      <rect x="266" y="184" width="224" height="74" rx="22" fill="url(#intel-glass)" stroke="#6C9880" stroke-opacity="0.26" stroke-width="0.8" />
+      <rect x="268" y="186" width="220" height="70" rx="20" fill="url(#intel-sheen)" />
+      <circle cx="300" cy="221" r="18" fill="#EAF4EE" fill-opacity="0.75" />
+      <path d="m294 222 5 5 9-12" fill="none" stroke="#16dc6b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="328" y="216" fill="#102018" font-size="16" font-weight="600">Preço competitivo</text>
+      <text x="328" y="239" fill="#66736B" font-size="14">12% abaixo da média</text>
+    </g>
+
+    <g fill="#66736B" font-size="14">
+      <text x="96" y="407">Pesquisa</text>
+      <text x="235" y="407">Análise</text>
+      <text x="370" y="407">Disputa</text>
+      <text x="505" y="407">Decisão</text>
+    </g>
+  </g>
+
+  <g font-family="Poppins, Segoe UI, Arial, sans-serif" filter="url(#intel-score-glow)">
+    <rect x="652" y="130" width="200" height="226" rx="30" fill="url(#intel-green-glass)" stroke="#16dc6b" stroke-opacity="0.78" stroke-width="1.2" />
+    <rect x="654" y="132" width="196" height="222" rx="28" fill="url(#intel-sheen)" stroke="#FFFFFF" stroke-opacity="0.055" stroke-width="0.6" />
+    <text x="682" y="172" fill="#5B6961" font-size="14" font-weight="600" letter-spacing="1.4">SCORE</text>
+    <text x="682" y="244" fill="#FFFFFF" font-size="68" font-weight="700" letter-spacing="-2">92</text>
+    <rect x="682" y="266" width="140" height="9" rx="4.5" fill="#FFFFFF" fill-opacity="0.08" />
+    <rect x="682" y="266" width="128" height="9" rx="4.5" fill="#16dc6b" />
+    <text x="682" y="310" fill="#FFFFFF" font-size="17" font-weight="600">Alta aderência</text>
+    <text x="682" y="334" fill="#78eca8" font-size="14">Oportunidade indicada</text>
+  </g>
+
+  <g font-family="Poppins, Segoe UI, Arial, sans-serif" filter="url(#intel-shadow)">
+    <rect x="652" y="378" width="200" height="92" rx="25" fill="url(#intel-glass)" stroke="#6C9880" stroke-opacity="0.22" stroke-width="0.8" />
+    <rect x="654" y="380" width="196" height="88" rx="23" fill="url(#intel-sheen)" />
+    <circle cx="688" cy="424" r="20" fill="#07b852" fill-opacity="0.18" />
+    <path d="m688 410 3 9 9 3-9 3-3 9-3-9-9-3 9-3 3-9Z" fill="#16dc6b" />
+    <text x="720" y="418" fill="#102018" font-size="15.5" font-weight="600">Edital analisado</text>
+    <text x="720" y="442" fill="#66736B" font-size="13.5">12 critérios com IA</text>
+  </g>
+</svg>

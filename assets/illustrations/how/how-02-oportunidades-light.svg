@@ -1,0 +1,93 @@
+<svg data-theme-asset="light" xmlns="http://www.w3.org/2000/svg" width="640" height="590" viewBox="0 0 640 590" fill="none">
+  <defs>
+    <linearGradient id="source" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#F8FBF9" stop-opacity=".97"/>
+    </linearGradient>
+    <linearGradient id="card" x1="56" y1="344" x2="584" y2="502" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6F1"/>
+      <stop offset="1" stop-color="#F8FBF9"/>
+    </linearGradient>
+    <linearGradient id="status" x1="174" y1="516" x2="466" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF7EF"/>
+      <stop offset="1" stop-color="#F5F9F6"/>
+    </linearGradient>
+    <linearGradient id="brandLight" x1="4" y1="-10" x2="93" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#53D24E"/>
+      <stop offset="1" stop-color="#36BE43"/>
+    </linearGradient>
+    <linearGradient id="brandDark" x1="4" y1="72" x2="160" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#006238"/>
+      <stop offset="1" stop-color="#05A94D"/>
+    </linearGradient>
+    <filter id="logoGlow" x="248" y="100" width="144" height="144" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#07B852" flood-opacity=".18"/>
+    </filter>
+    <filter id="cardShadow" x="36" y="316" width="568" height="218" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#173A29" flood-opacity=".10"/>
+    </filter>
+    <style>
+      @font-face{font-family:Poppins;src:url('../../fonts/poppins-400.ttf') format('truetype');font-weight:400}
+      @font-face{font-family:Poppins;src:url('../../fonts/poppins-600.ttf') format('truetype');font-weight:600}
+      text{font-family:Poppins,Arial,sans-serif}
+      .source{fill:#46564D;font-size:24px;font-weight:500}
+      .title{fill:#102018;font-size:30px;font-weight:600}
+      .secondary{fill:#5B6961;font-size:24px;font-weight:400}
+      .icon{stroke:#07B852;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <g>
+    <rect x="28" y="36" width="170" height="58" rx="19" fill="url(#source)" stroke="#07B852" stroke-opacity=".24"/>
+    <circle cx="59" cy="65" r="14" fill="#07B852" fill-opacity=".1"/>
+    <path class="icon" d="M52 71V60l7-4 7 4v11M49 71h20M56 63h1M61 63h1M56 67h1M61 67h1"/>
+    <text x="84" y="74" class="source">PNCP</text>
+  </g>
+  <g>
+    <rect x="235" y="26" width="170" height="58" rx="19" fill="url(#source)" stroke="#07B852" stroke-opacity=".24"/>
+    <circle cx="266" cy="55" r="14" fill="#07B852" fill-opacity=".1"/>
+    <path class="icon" d="M258 51h16M261 47l5-4 5 4M260 55v10M266 55v10M272 55v10M257 65h18"/>
+    <text x="291" y="64" class="source">Portais</text>
+  </g>
+  <g>
+    <rect x="442" y="36" width="170" height="58" rx="19" fill="url(#source)" stroke="#07B852" stroke-opacity=".24"/>
+    <circle cx="473" cy="65" r="14" fill="#07B852" fill-opacity=".1"/>
+    <path class="icon" d="M466 57h14v16h-14zM469 61h8M469 65h8M469 69h5"/>
+    <text x="498" y="74" class="source">Diários</text>
+  </g>
+
+  <path d="M113 94v24c0 22 18 40 40 40h111M320 84v32M527 94v24c0 22-18 40-40 40H376" stroke="#07B852" stroke-opacity=".42" stroke-width="2" stroke-dasharray="5 7"/>
+  <g filter="url(#logoGlow)">
+    <rect x="276" y="124" width="88" height="88" rx="27" fill="#F4F8F5" stroke="#07B852" stroke-opacity=".54" stroke-width="2"/>
+    <circle cx="320" cy="168" r="34" fill="#07B852" fill-opacity=".07"/>
+    <g transform="translate(293 145) scale(.34)">
+      <path d="M4 46c0-7 3-12 10-16L72-7c11-7 20-1 21 13v66L4 116V46Z" fill="url(#brandLight)"/>
+      <path d="m93 72 59 1c9 0 13 7 7 15l-51 28H4l89-44Z" fill="url(#brandDark)"/>
+      <path d="m4 116 89-44-7 8-74 42-8-6Z" fill="#DDF2E5" fill-opacity=".42"/>
+    </g>
+  </g>
+  <text x="320" y="248" text-anchor="middle" class="title">Monitoramento diário</text>
+  <text x="320" y="282" text-anchor="middle" class="secondary">Publicações analisadas automaticamente</text>
+  <path d="M320 212v94" stroke="#07B852" stroke-width="2" stroke-dasharray="5 7"/>
+
+  <rect x="86" y="320" width="468" height="154" rx="25" fill="#F5F9F6" stroke="#FFFFFF" stroke-opacity=".08" opacity=".55"/>
+  <g filter="url(#cardShadow)">
+    <rect x="56" y="344" width="528" height="158" rx="26" fill="url(#card)"/>
+    <rect x="56.75" y="344.75" width="526.5" height="156.5" rx="25.25" stroke="#07B852" stroke-opacity=".36" stroke-width="1.5"/>
+  </g>
+  <rect x="82" y="371" width="58" height="58" rx="17" fill="#07B852" fill-opacity=".11"/>
+  <path class="icon" d="M96 415v-27h30v27M92 415h38M103 395h4M115 395h4M103 404h4M115 404h4"/>
+  <text x="160" y="389" class="title">Nova oportunidade</text>
+  <text x="160" y="425" class="secondary">Tecnologia • São Paulo</text>
+  <rect x="160" y="446" width="232" height="40" rx="13" fill="#07B852" fill-opacity=".09" stroke="#07B852" stroke-opacity=".25"/>
+  <circle cx="181" cy="466" r="6" fill="#07B852"/>
+  <text x="200" y="475" fill="#5F806E" font-size="24" font-weight="600">94% aderente</text>
+  <path d="M514 466h36" stroke="#8DA398" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="556" cy="466" r="7" fill="#21D46A"/>
+
+  <path d="M320 502v14" stroke="#07B852" stroke-width="2" stroke-dasharray="4 5"/>
+  <rect x="174" y="516" width="292" height="64" rx="22" fill="url(#status)" stroke="#07B852" stroke-opacity=".56" stroke-width="1.5"/>
+  <circle cx="209" cy="548" r="16" fill="#07B852"/>
+  <path d="M209 540v16M201 548h16" stroke="#03100A" stroke-width="2.6" stroke-linecap="round"/>
+  <text x="236" y="557" fill="#102018" font-size="26" font-weight="600">12 novas hoje</text>
+</svg>

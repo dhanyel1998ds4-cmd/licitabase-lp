@@ -1,0 +1,12 @@
+{
+  "name": "licitabase-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page responsiva e acessível do Licitabase.",
+  "scripts": {
+    "dev": "node server.cjs",
+    "start": "node server.cjs",
+    "build": "node scripts/build-static.cjs",
+    "check": "node --check server.cjs && node --check script.js && node --check pricing-data.js && node --check pricing.js"
+  }
+}

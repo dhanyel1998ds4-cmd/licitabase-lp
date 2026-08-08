@@ -1,0 +1,8 @@
+reference/
+verification/
+visual-comparison/
+motion-analysis/
+dist/
+.vercel/
+node_modules/
+*.log

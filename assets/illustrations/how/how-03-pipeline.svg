@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="590" viewBox="0 0 640 590" fill="none">
+  <defs>
+    <linearGradient id="board" x1="44" y1="104" x2="596" y2="458" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1814" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#050A0B" stop-opacity=".98"/>
+    </linearGradient>
+    <linearGradient id="card" x1="84" y1="236" x2="556" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1C17"/>
+      <stop offset="1" stop-color="#07100D"/>
+    </linearGradient>
+    <linearGradient id="status" x1="134" y1="494" x2="506" y2="562" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D2118"/>
+      <stop offset="1" stop-color="#07100D"/>
+    </linearGradient>
+    <filter id="boardShadow" x="24" y="84" width="592" height="414" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity=".3"/>
+    </filter>
+    <filter id="activeGlow" x="472" y="112" width="128" height="104" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#07B852" flood-opacity=".16"/>
+    </filter>
+    <style>
+      @font-face{font-family:Poppins;src:url('../../fonts/poppins-400.ttf') format('truetype');font-weight:400}
+      @font-face{font-family:Poppins;src:url('../../fonts/poppins-600.ttf') format('truetype');font-weight:600}
+      text{font-family:Poppins,Arial,sans-serif}
+      .stage{fill:#DCE5E0;font-size:27px;font-weight:600}
+      .title{fill:#F7FAF8;font-size:30px;font-weight:600}
+      .secondary{fill:#B7C0BB;font-size:24px;font-weight:400}
+      .icon{stroke:#07B852;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <path d="M104 62H296M344 62H536" stroke="#405149" stroke-width="2" stroke-dasharray="6 8"/>
+  <circle cx="80" cy="62" r="24" fill="#091611" stroke="#07B852" stroke-opacity=".38"/>
+  <text x="80" y="70" text-anchor="middle" fill="#C5D0CA" font-size="24" font-weight="600">01</text>
+  <circle cx="320" cy="62" r="25" fill="#0A1C14" stroke="#07B852" stroke-opacity=".56"/>
+  <path d="m310 62 7 7 14-17" stroke="#21D46A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="560" cy="62" r="24" fill="#091611" stroke="#07B852" stroke-opacity=".38"/>
+  <text x="560" y="70" text-anchor="middle" fill="#C5D0CA" font-size="24" font-weight="600">03</text>
+
+  <g filter="url(#boardShadow)">
+    <rect x="44" y="104" width="552" height="354" rx="28" fill="url(#board)"/>
+    <rect x="44.75" y="104.75" width="550.5" height="352.5" rx="27.25" stroke="#07B852" stroke-opacity=".3" stroke-width="1.5"/>
+  </g>
+
+  <path d="M110 158H310" stroke="#57645E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M330 158H530" stroke="#07B852" stroke-opacity=".48" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="110" cy="158" r="13" fill="#0B1713" stroke="#7B8A82" stroke-width="2"/>
+  <circle cx="320" cy="158" r="13" fill="#0B1713" stroke="#07B852" stroke-opacity=".62" stroke-width="2"/>
+  <g filter="url(#activeGlow)">
+    <circle cx="530" cy="158" r="16" fill="#07B852"/>
+  </g>
+  <path d="m522 158 6 6 11-13" stroke="#03100A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="110" y="207" text-anchor="middle" class="stage">Análise</text>
+  <text x="320" y="207" text-anchor="middle" class="stage">Aprovada</text>
+  <text x="530" y="207" text-anchor="middle" fill="#52E68B" font-size="27" font-weight="600">Disputa</text>
+
+  <rect x="84" y="236" width="472" height="166" rx="24" fill="url(#card)" stroke="#07B852" stroke-opacity=".28" stroke-width="1.5"/>
+  <rect x="108" y="262" width="62" height="62" rx="18" fill="#07B852" fill-opacity=".1"/>
+  <path class="icon" d="M122 305v-28h34v28M118 305h42M130 284h4M144 284h4M130 294h4M144 294h4"/>
+  <text x="190" y="286" class="title">Serviços de TI</text>
+  <text x="190" y="323" class="secondary">Pregão 012/2026</text>
+  <rect x="190" y="344" width="214" height="40" rx="13" fill="#07B852" fill-opacity=".09" stroke="#07B852" stroke-opacity=".24"/>
+  <circle cx="211" cy="364" r="6" fill="#07B852"/>
+  <text x="230" y="373" fill="#BFEAD0" font-size="24" font-weight="600">Disputa ativa</text>
+  <rect x="466" y="262" width="62" height="62" rx="18" fill="#07B852" fill-opacity=".12" stroke="#07B852" stroke-opacity=".24"/>
+  <path class="icon" d="m480 280 15 15M493 274l7 7-14 14-7-7 14-14ZM477 298l-6 6M468 308h38"/>
+  <path d="M466 358h62" stroke="#07B852" stroke-opacity=".14" stroke-width="10" stroke-linecap="round"/>
+  <path d="M466 358h48" stroke="#07B852" stroke-width="10" stroke-linecap="round"/>
+  <text x="490" y="387" text-anchor="middle" fill="#C8D5CE" font-size="24">Em disputa</text>
+
+  <path d="M320 402v92" stroke="#07B852" stroke-width="2" stroke-dasharray="5 6"/>
+  <rect x="134" y="494" width="372" height="68" rx="23" fill="url(#status)" stroke="#07B852" stroke-opacity=".58" stroke-width="1.5"/>
+  <circle cx="171" cy="528" r="17" fill="#07B852"/>
+  <path d="m163 528 6 6 11-13" stroke="#03100A" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="202" y="537" fill="#EEF7F2" font-size="26" font-weight="600">Pipeline organizado</text>
+</svg>

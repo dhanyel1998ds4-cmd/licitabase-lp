@@ -1,0 +1,1031 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": {
+    "name": "SaaPilot motion forensics",
+    "referenceUrl": "https://saapilot.framer.website/",
+    "referenceTitle": "Saapilot – AI SaaS & Tech Startup Framer Template",
+    "analysisDate": "2026-08-06",
+    "phase": "analysis-only",
+    "implementationAuthorized": false
+  },
+  "metadata": {
+    "referenceUrl": "https://saapilot.framer.website/",
+    "videoFile": "F:/VIDEOS PC PASTA/Captures/Saapilot – AI SaaS & Tech Startup Framer Template - Google Chrome 2026-08-06 16-59-49.mp4",
+    "videoDurationMs": 55303.4,
+    "videoResolution": {
+      "width": 1920,
+      "height": 1060
+    },
+    "pageViewportEstimate": {
+      "devicePixels": {
+        "width": 1920,
+        "height": 972
+      },
+      "cssPixelsAtRecordedZoom": {
+        "width": 2560,
+        "height": 1296
+      },
+      "browserZoom": 0.75
+    },
+    "analysisDate": "2026-08-06",
+    "limitations": [
+      "The recording starts after the page-load reveal has settled, so load timings come from live browser and public code.",
+      "Game DVR produced many exact or near-duplicate frames during holds; exact consecutive duplicates were 39.98% of decoded frames.",
+      "The recording shows no pointer hover, keyboard focus, mobile navigation click, or FAQ click; those states were verified on the live URL.",
+      "Framer pre-samples springs into linear WAAPI keyframes, so source spring parameters take precedence over getAnimations().easing."
+    ]
+  },
+  "evidence": {
+    "priority": [
+      "live-browser-and-public-code",
+      "mandatory-reference-video",
+      "local-screenshots-and-existing-analysis"
+    ],
+    "artifacts": {
+      "videoMetadata": "motion-analysis/video-metadata.json",
+      "videoScrollTimeline": "motion-analysis/video-scroll-timeline.json",
+      "criticalSequenceManifest": "motion-analysis/critical-sequences.json",
+      "generalContactSheet": "motion-analysis/general-contact-sheet.jpg",
+      "liveInspection": "motion-analysis/live-inspection.json",
+      "liveSummary": "motion-analysis/live-summary.json",
+      "interactionInspection": "motion-analysis/interaction-inspection.json",
+      "motionDetails": "motion-analysis/motion-details.json"
+    },
+    "confidenceScale": {
+      "high": "Confirmed by public code plus live browser, or by live browser plus the video.",
+      "medium": "Observed in one primary source and consistent with the others, but an exact parameter is not exposed.",
+      "low": "Inference only; do not treat as a pixel-perfect constant without another capture."
+    }
+  },
+  "capture": {
+    "file": "F:/VIDEOS PC PASTA/Captures/Saapilot – AI SaaS & Tech Startup Framer Template - Google Chrome 2026-08-06 16-59-49.mp4",
+    "containerDurationMs": 55303.4,
+    "decodedDurationMs": 55244.733,
+    "widthPx": 1920,
+    "heightPx": 1060,
+    "fps": 29.99380936463325,
+    "codec": "H.264",
+    "decodedFrames": 1657,
+    "audioBitrateKbps": 80,
+    "browserChromeHeightPx": 88,
+    "devicePageViewportPx": {
+      "width": 1920,
+      "height": 972
+    },
+    "inferredPageZoom": 0.75,
+    "effectiveCssViewport": {
+      "width": 2560,
+      "height": 1296
+    },
+    "zoomEvidence": {
+      "contentRailDeviceWidthPx": 852,
+      "contentRailCssWidthPx": 1136,
+      "movingScrollbarThumbPx": 108,
+      "pageHeightCssPx": 11835,
+      "confidence": "high"
+    }
+  },
+  "technology": {
+    "framework": "Framer generated React site",
+    "animationRuntime": "Motion/Framer Motion using WAAPI and layout projection",
+    "smoothScroll": {
+      "library": "Lenis",
+      "version": "1.1.2",
+      "component": "Framer University Smooth Scroll",
+      "intensity": 6,
+      "durationMs": 600,
+      "easing": "min(1, 1.001 - 2^(-10*t))",
+      "orientation": "vertical",
+      "smoothWheel": true,
+      "syncTouch": false
+    },
+    "triggers": "Framer viewport effects backed by IntersectionObserver",
+    "sticky": "native CSS position: sticky",
+    "continuousUpdates": [
+      "requestAnimationFrame for Lenis",
+      "MotionValue/useSpring for counters",
+      "useScroll/useTransform for About text color"
+    ],
+    "notDetected": [
+      "GSAP",
+      "ScrollTrigger",
+      "Lottie",
+      "canvas animation"
+    ],
+    "waapiCaveat": "Computed WAAPI easing often reports linear because Framer pre-samples springs into dense keyframes. Recreate the source spring, not a linear tween."
+  },
+  "breakpoints": {
+    "desktop": {
+      "query": "(min-width: 1200px)",
+      "workflowVariant": "desktop-triggered",
+      "testimonialVariant": "fan-carousel"
+    },
+    "tablet": {
+      "query": "(min-width: 810px) and (max-width: 1199.98px)",
+      "workflowVariant": "mobile-static-stack",
+      "testimonialVariant": "fan-carousel"
+    },
+    "phone": {
+      "query": "(max-width: 809.98px)",
+      "workflowVariant": "mobile-static-stack",
+      "testimonialVariant": "horizontal-ticker",
+      "navigationVariant": "expandable-mobile-nav"
+    }
+  },
+  "motionTokens": {
+    "durations": {
+      "aboutCharacterMs": 300,
+      "buttonVariantMs": 400,
+      "navLinkHoverMs": 450,
+      "lenisMs": 600,
+      "workflowVariantMs": 600,
+      "logoMarqueeCycleMs": 84000,
+      "testimonialStateMs": 5000,
+      "testimonialLastStateMs": 3000
+    },
+    "easings": {
+      "aboutCharacter": "easeInOut",
+      "navLinkHover": [0.44, 0, 0.56, 1],
+      "lenis": "min(1, 1.001 - 2^(-10*t))",
+      "marquee": "linear"
+    },
+    "distances": {
+      "heroEnterYpx": 160,
+      "headingEnterYpx": 95,
+      "itemEnterYpx": 50,
+      "sideEnterXpx": -60,
+      "workflowCardEnterYpx": 500,
+      "marqueeTravelXpx": -2100
+    },
+    "stagger": {
+      "sectionItemsMs": 200,
+      "heroDelaySequenceMs": [200, 400, 600, 800, 1000]
+    },
+    "blur": {
+      "revealPx": 0,
+      "mobileNavBackdropPx": 7
+    },
+    "opacity": {
+      "hidden": 0,
+      "heroHidden": 0.001,
+      "visible": 1,
+      "workflowMarkerInactive": 0.5
+    },
+    "springs": {
+      "heroAppear": {
+        "type": "spring",
+        "stiffness": 200,
+        "damping": 40,
+        "mass": 1,
+        "observedSettleMs": 1120
+      },
+      "sectionAppear": {
+        "type": "spring",
+        "stiffness": 300,
+        "damping": 60,
+        "mass": 1
+      },
+      "sideIllustrationAppear": {
+        "type": "spring",
+        "stiffness": 500,
+        "damping": 80,
+        "mass": 1
+      },
+      "workflowVariant": {
+        "type": "spring",
+        "durationMs": 600,
+        "bounce": 0.2
+      },
+      "testimonialVariant": {
+        "type": "spring",
+        "stiffness": 500,
+        "damping": 60,
+        "mass": 1
+      },
+      "faqLayout": {
+        "type": "spring",
+        "stiffness": 400,
+        "damping": 40,
+        "mass": 1
+      },
+      "buttonVariant": {
+        "type": "spring",
+        "durationMs": 400,
+        "bounce": 0.2
+      },
+      "desktopNav": {
+        "type": "spring",
+        "stiffness": 400,
+        "damping": 40,
+        "mass": 1
+      },
+      "mobileNavOpen": {
+        "type": "spring",
+        "stiffness": 400,
+        "damping": 35,
+        "mass": 0.6
+      },
+      "mobileNavClosed": {
+        "type": "spring",
+        "stiffness": 400,
+        "damping": 42,
+        "mass": 1
+      },
+      "dropdown": {
+        "type": "spring",
+        "stiffness": 600,
+        "damping": 40,
+        "mass": 0.5
+      },
+      "counter": {
+        "type": "spring",
+        "stiffness": 59,
+        "damping": 44,
+        "mass": 1
+      }
+    },
+    "tweens": {
+      "aboutCharacterColor": {
+        "durationMs": 300,
+        "easing": "easeInOut"
+      },
+      "navLinkHover": {
+        "durationMs": 450,
+        "easing": [
+          0.44,
+          0,
+          0.56,
+          1
+        ]
+      },
+      "marquee": {
+        "durationMs": 84000,
+        "easing": "linear"
+      }
+    },
+    "distancesPx": {
+      "heroEnterY": 160,
+      "itemEnterY": 50,
+      "sectionHeadingEnterY": 95,
+      "sideIllustrationEnterX": -60,
+      "workflowCardEnterY": 500,
+      "dropdownEnterScale": 0.95,
+      "logoMarqueeTravelX": -2100
+    },
+    "delaysMs": {
+      "heroSequence": [
+        200,
+        400,
+        600,
+        800,
+        1000
+      ],
+      "sectionStagger": [
+        0,
+        200,
+        400,
+        600,
+        800,
+        1000
+      ]
+    },
+    "thresholds": {
+      "sectionHeading": 0.5,
+      "workflowTargets": 0.5,
+      "itemReveal": 0,
+      "counterMargin": "-100px"
+    }
+  },
+  "videoTimeline": [
+    {
+      "startMs": 0,
+      "endMs": 5368,
+      "direction": "hold",
+      "scrollYCss": [
+        0,
+        0
+      ],
+      "focus": "Hero steady state; the recording starts after the load entrance has completed."
+    },
+    {
+      "startMs": 5368,
+      "endMs": 8100,
+      "direction": "down",
+      "scrollYCssApprox": [
+        0,
+        1300
+      ],
+      "focus": "Hero to About; text-color progression and statistics enter."
+    },
+    {
+      "startMs": 8100,
+      "endMs": 11200,
+      "direction": "up",
+      "scrollYCssApprox": [
+        1300,
+        285
+      ],
+      "focus": "Deliberate About reversal; scroll-linked text reverses, once-only reveals remain visible."
+    },
+    {
+      "startMs": 11200,
+      "endMs": 14900,
+      "direction": "down",
+      "scrollYCssApprox": [
+        285,
+        2926
+      ],
+      "focus": "About through feature grid."
+    },
+    {
+      "startMs": 14900,
+      "endMs": 16700,
+      "direction": "hold",
+      "scrollYCssApprox": [
+        2926,
+        2926
+      ],
+      "focus": "Feature grid pause."
+    },
+    {
+      "startMs": 16700,
+      "endMs": 24300,
+      "direction": "down",
+      "scrollYCssApprox": [
+        2926,
+        5350
+      ],
+      "focus": "Workflow forward: card 1, card 2, card 3."
+    },
+    {
+      "startMs": 24300,
+      "endMs": 29100,
+      "direction": "up",
+      "scrollYCssApprox": [
+        5350,
+        3137
+      ],
+      "focus": "Workflow reverse: card 3 exits, then card 2; card 1 remains active."
+    },
+    {
+      "startMs": 29200,
+      "endMs": 33200,
+      "direction": "down",
+      "scrollYCssApprox": [
+        3137,
+        6670
+      ],
+      "focus": "Workflow fast replay and exit into benefits."
+    },
+    {
+      "startMs": 33800,
+      "endMs": 35500,
+      "direction": "down",
+      "scrollYCssApprox": [
+        6670,
+        7588
+      ],
+      "focus": "Benefits to testimonials."
+    },
+    {
+      "startMs": 35600,
+      "endMs": 39700,
+      "direction": "hold",
+      "scrollYCssApprox": [
+        7588,
+        7588
+      ],
+      "focus": "Desktop testimonial autoplay; fan stack changes variants."
+    },
+    {
+      "startMs": 39800,
+      "endMs": 43100,
+      "direction": "down",
+      "scrollYCssApprox": [
+        7588,
+        10018
+      ],
+      "focus": "Insights, CTA, FAQ."
+    },
+    {
+      "startMs": 43200,
+      "endMs": 45300,
+      "direction": "hold",
+      "scrollYCssApprox": [
+        9993,
+        10018
+      ],
+      "focus": "FAQ hold; the two default-open answers remain unchanged, so no click is evidenced in the recording."
+    },
+    {
+      "startMs": 45400,
+      "endMs": 46110,
+      "direction": "down",
+      "scrollYCssApprox": [
+        10018,
+        10539
+      ],
+      "focus": "Footer and absolute bottom."
+    },
+    {
+      "startMs": 46510,
+      "endMs": 52800,
+      "direction": "up",
+      "scrollYCssApprox": [
+        10539,
+        0
+      ],
+      "maxSpeedCssPxPerSecond": -2510.24,
+      "focus": "Rapid return to hero; once-only reveals do not replay, workflow variants do reverse."
+    },
+    {
+      "startMs": 52800,
+      "endMs": 55303,
+      "direction": "hold",
+      "scrollYCss": [
+        0,
+        0
+      ],
+      "focus": "Hero final steady state."
+    }
+  ],
+  "animations": [
+    {
+      "id": "global.smooth-scroll",
+      "section": "global",
+      "event": "wheel",
+      "behavior": "Lenis interpolates native document scroll; CSS scroll-behavior remains auto.",
+      "transitionToken": "durations.lenisMs + easings.lenis",
+      "parameters": {
+        "durationMs": 600,
+        "easing": "min(1, 1.001 - 2^(-10*t))",
+        "wheel": true,
+        "touch": "native"
+      },
+      "reverse": "Symmetric for upward wheel input.",
+      "reducedMotion": "Disable Lenis and use native auto scroll.",
+      "confidence": "high",
+      "evidence": [
+        "html class lenis",
+        "public script_main module: Lenis 1.1.2 and intensity 6",
+        "video scrollbar velocity tails"
+      ]
+    },
+    {
+      "id": "global.fixed-header",
+      "section": "global",
+      "event": "scroll",
+      "behavior": "Navigation remains fixed 17px from the CSS viewport top on desktop; no separate scroll-state transition was detected.",
+      "initial": {
+        "position": "fixed",
+        "topPx": 17,
+        "heightPx": 51.59,
+        "backdropFilter": "none"
+      },
+      "reverse": "Not applicable.",
+      "reducedMotion": "No change; the header is static in both motion preferences.",
+      "confidence": "high"
+    },
+    {
+      "id": "hero.load-stagger",
+      "section": "hero",
+      "event": "page hydration/load",
+      "initial": {
+        "opacity": 0.001,
+        "yPx": 160
+      },
+      "target": {
+        "opacity": 1,
+        "yPx": 0
+      },
+      "transition": {
+        "$token": "springs.heroAppear",
+        "delaysMsByGroup": {
+          "announcementAndH1": 200,
+          "supportingCopy": 400,
+          "buttonsAndSocialProof": 600,
+          "heroBackdropOrGlow": 800,
+          "dashboardVisual": 1000
+        }
+      },
+      "repeat": "once per page load",
+      "videoObservation": "Not present in the recording; frame zero is already settled.",
+      "reducedMotion": "Render target state immediately.",
+      "confidence": "high",
+      "timingToleranceMs": 40
+    },
+    {
+      "id": "hero.logo-marquee",
+      "section": "hero-trust-strip",
+      "event": "loop while on screen",
+      "initial": {
+        "xPx": 0
+      },
+      "target": {
+        "xPx": -2100
+      },
+      "transition": {
+        "durationMs": 84000,
+        "easing": "linear"
+      },
+      "speedPxPerSecond": 25,
+      "repeat": "infinite",
+      "offscreen": "Framer pauses the loop while the strip is offscreen.",
+      "reducedMotion": "Stop at x=0 and expose a representative static logo row.",
+      "confidence": "high"
+    },
+    {
+      "id": "about.character-color",
+      "section": "about",
+      "event": "continuous scroll progress",
+      "trigger": {
+        "target": "About narrative paragraph",
+        "offset": [
+          "start 0.75",
+          "start 0.15"
+        ]
+      },
+      "initial": {
+        "color": "#85868B"
+      },
+      "target": {
+        "color": "#FFFFFF"
+      },
+      "distribution": "Progress is divided by word and then character. Characters before transitionStartIndex 27 start white.",
+      "transition": {
+        "durationMs": 300,
+        "easing": "easeInOut"
+      },
+      "reverse": "Fully reversible with scroll direction.",
+      "reducedMotion": "All characters #FFFFFF without scroll linkage.",
+      "confidence": "high"
+    },
+    {
+      "id": "about.statistics-counter",
+      "section": "about",
+      "event": "first viewport entry",
+      "trigger": {
+        "once": true,
+        "margin": "-100px"
+      },
+      "initial": 0,
+      "targets": [
+        "597M+",
+        "249+",
+        "99.57%",
+        "129M+"
+      ],
+      "transition": {
+        "$token": "springs.counter"
+      },
+      "rendering": "Intl.NumberFormat; integer or two decimal places.",
+      "reverse": "Does not reset on upward scroll.",
+      "reducedMotion": "Render final values immediately.",
+      "confidence": "high"
+    },
+    {
+      "id": "global.section-heading-appear",
+      "section": "multiple",
+      "event": "first viewport entry",
+      "countOnHomePage": 6,
+      "trigger": {
+        "intersectionRatio": 0.5,
+        "once": true
+      },
+      "initial": {
+        "opacity": 0,
+        "yPx": 95
+      },
+      "target": {
+        "opacity": 1,
+        "yPx": 0
+      },
+      "transition": {
+        "$token": "springs.heroAppear",
+        "delayMs": 0
+      },
+      "reverse": "No exit and no replay.",
+      "reducedMotion": "Render target state immediately.",
+      "confidence": "high"
+    },
+    {
+      "id": "global.item-stagger-appear",
+      "section": "about-metrics/features/benefits/blog/faq",
+      "event": "first viewport entry",
+      "countOnHomePage": 13,
+      "trigger": {
+        "intersectionRatio": 0,
+        "once": true
+      },
+      "initial": {
+        "opacity": 0,
+        "yPx": 50
+      },
+      "target": {
+        "opacity": 1,
+        "yPx": 0
+      },
+      "transition": {
+        "$token": "springs.sectionAppear",
+        "staggerDelaysMs": [
+          0,
+          200,
+          400,
+          600,
+          800,
+          1000
+        ]
+      },
+      "reverse": "No exit and no replay.",
+      "reducedMotion": "Render target state immediately.",
+      "confidence": "high"
+    },
+    {
+      "id": "global.side-illustration-appear",
+      "section": "feature/CTA/testimonial internals",
+      "event": "first viewport entry",
+      "trigger": {
+        "intersectionRatio": 0.5,
+        "once": true
+      },
+      "initial": {
+        "opacity": 0,
+        "xPx": -60
+      },
+      "target": {
+        "opacity": 1,
+        "xPx": 0
+      },
+      "transition": {
+        "$token": "springs.sideIllustrationAppear"
+      },
+      "exitDefinitionPresent": true,
+      "actualRepeat": "once, so the exit definition is not used during normal reverse scroll.",
+      "reducedMotion": "Render target state immediately.",
+      "confidence": "high"
+    },
+    {
+      "id": "workflow.desktop-sticky-stage",
+      "section": "how-it-works",
+      "event": "document scroll",
+      "enabledWhen": "min-width: 1200px",
+      "geometry": {
+        "rootDocumentYCss": 4155.56,
+        "rootWidthPx": 1136,
+        "rootHeightPx": 545,
+        "position": "sticky",
+        "topPx": 160,
+        "approxStickyScrollRangeCss": [
+          3995.56,
+          5800
+        ],
+        "trigger1DocumentYCss": 4724.56,
+        "trigger1HeightPx": 878,
+        "trigger2DocumentYCss": 5626.56,
+        "trigger2HeightPx": 878
+      },
+      "classification": "Native sticky plus scroll-triggered variants; not horizontal scroll and not continuous parallax.",
+      "reverse": "The three viewport target states are reversible.",
+      "reducedMotion": "Disable sticky choreography and show the static vertical stack.",
+      "confidence": "high",
+      "geometryTolerancePx": 4
+    },
+    {
+      "id": "workflow.desktop-step-variants",
+      "section": "how-it-works",
+      "event": "intersection state",
+      "enabledWhen": "min-width: 1200px",
+      "trigger": {
+        "targets": [
+          {
+            "element": "#step-trigger-activate",
+            "threshold": 0.5,
+            "variant": "Step 1"
+          },
+          {
+            "element": "#step-trigger-1",
+            "threshold": 0.5,
+            "variant": "Step 2"
+          },
+          {
+            "element": "#step-trigger-2",
+            "threshold": 0.5,
+            "variant": "Step 3"
+          }
+        ],
+        "once": false
+      },
+      "states": {
+        "Inactive": {
+          "cardsTopPx": [
+            500,
+            500,
+            500
+          ],
+          "progressWidthPercent": 0,
+          "markerOpacity": [
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        "Step 1": {
+          "cardsTopPx": [
+            0,
+            500,
+            500
+          ],
+          "progressWidthPercent": 33,
+          "markerOpacity": [
+            1,
+            0.5,
+            0.5
+          ]
+        },
+        "Step 2": {
+          "cardsTopPx": [
+            0,
+            0,
+            500
+          ],
+          "progressWidthPercent": 67,
+          "markerOpacity": [
+            1,
+            1,
+            0.5
+          ]
+        },
+        "Step 3": {
+          "cardsTopPx": [
+            0,
+            0,
+            0
+          ],
+          "progressWidthPercent": 100,
+          "markerOpacity": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "transition": {
+        "$token": "springs.workflowVariant"
+      },
+      "videoForwardApproxMs": {
+        "step1": [
+          17400,
+          18200
+        ],
+        "step2": [
+          19600,
+          20300
+        ],
+        "step3": [
+          22600,
+          23300
+        ]
+      },
+      "videoReverseApproxMs": {
+        "step3To2": [
+          24600,
+          25400
+        ],
+        "step2To1": [
+          26600,
+          27400
+        ]
+      },
+      "reducedMotion": "Do not activate threshold variants; render the three steps as a static final-state stack.",
+      "confidence": "high",
+      "timingToleranceMs": 200
+    },
+    {
+      "id": "workflow.tablet-phone-static-stack",
+      "section": "how-it-works",
+      "event": "responsive layout",
+      "enabledWhen": "max-width: 1199.98px",
+      "behavior": "Trigger 1 and Trigger 2 are removed from the DOM. The component switches to Mobile and lays all three cards in a vertical stack.",
+      "rootHeightPx": 1427.66,
+      "computedPosition": "sticky",
+      "effectiveBehavior": "The root is taller than the viewport and travels normally; browser measurements show no desktop pinning plateau.",
+      "animation": "No step activation transitions.",
+      "reducedMotion": "Same static stack.",
+      "confidence": "high"
+    },
+    {
+      "id": "testimonials.desktop-autoplay",
+      "section": "testimonials",
+      "event": "timer or pagination click",
+      "enabledWhen": "min-width: 810px",
+      "states": [
+        "Testimonial 1",
+        "Testimonial 2",
+        "Testimonial 3",
+        "Testimonial 4",
+        "Testimonial 5"
+      ],
+      "timerMs": {
+        "defaultStates": 5000,
+        "lastStateBeforeReset": 3000
+      },
+      "transition": {
+        "$token": "springs.testimonialVariant"
+      },
+      "visual": "Five-card fan stack; the active card moves to the front and the pagination highlight follows it.",
+      "click": "Five pagination controls set the matching variant immediately through the same spring.",
+      "offscreen": "Timer continues in the generated component; the video arrives at a later carousel state.",
+      "reducedMotion": "Stop autoplay and keep Testimonial 1; direct pagination may switch instantly.",
+      "confidence": "high"
+    },
+    {
+      "id": "testimonials.phone-ticker",
+      "section": "testimonials",
+      "event": "continuous loop",
+      "enabledWhen": "max-width: 809.98px",
+      "behavior": "The fan carousel is replaced by a horizontal left-moving ticker.",
+      "speedPxPerSecond": 40,
+      "gapPx": 30,
+      "repeat": "infinite",
+      "reducedMotion": "Stop the ticker and expose a horizontally scrollable static list.",
+      "confidence": "high"
+    },
+    {
+      "id": "button.primary-secondary-hover",
+      "section": "global interactive",
+      "event": "hover",
+      "initial": {
+        "primaryBackground": "rgb(3, 247, 181)",
+        "secondaryBackground": "rgba(3, 247, 181, 0.1)",
+        "secondaryBorder": "rgb(3, 247, 181)"
+      },
+      "target": {
+        "primaryBackgroundObserved": "rgb(50, 217, 150)",
+        "secondaryBackground": "rgb(3, 247, 181)",
+        "secondaryText": "dark"
+      },
+      "transition": {
+        "$token": "springs.buttonVariant"
+      },
+      "transform": "none",
+      "focus": "No authored focus animation was detected; add a static accessible focus-visible outline in implementation.",
+      "reducedMotion": "Color state may change instantly.",
+      "confidence": "high"
+    },
+    {
+      "id": "nav.all-pages-dropdown",
+      "section": "header",
+      "event": "hover/tap All Pages",
+      "initial": {
+        "opacity": 0,
+        "scale": 0.95
+      },
+      "target": {
+        "opacity": 1,
+        "scale": 1
+      },
+      "transition": {
+        "$token": "springs.dropdown"
+      },
+      "placement": "bottom, offsetX -60px, offsetY 15px, z-index 11",
+      "dismiss": "outside interaction; Escape dismissal is disabled by the generated overlay configuration.",
+      "linkHover": {
+        "opacity": 1,
+        "transitionMs": 450,
+        "easing": [
+          0.44,
+          0,
+          0.56,
+          1
+        ]
+      },
+      "reducedMotion": "Open/close instantly.",
+      "confidence": "high"
+    },
+    {
+      "id": "nav.mobile-expand",
+      "section": "header",
+      "event": "tap hamburger",
+      "enabledWhen": "max-width: 809.98px",
+      "states": [
+        "Phone closed",
+        "Phone Open"
+      ],
+      "transitionOpen": {
+        "$token": "springs.mobileNavOpen"
+      },
+      "transitionClose": {
+        "$token": "springs.mobileNavClosed"
+      },
+      "openVisual": "Dark panel, 1px mint-alpha border, 8px radius, backdrop blur 7px; link list and Book a Demo become visible.",
+      "reducedMotion": "Switch variants instantly.",
+      "confidence": "high"
+    },
+    {
+      "id": "faq.accordion",
+      "section": "faq",
+      "event": "tap question",
+      "initial": {
+        "variant": "Closed v2",
+        "heightPx": 72,
+        "plusRotationDeg": 0
+      },
+      "target": {
+        "variant": "Open v2",
+        "height": "content-dependent",
+        "plusRotationDeg": 45,
+        "answerMounted": true
+      },
+      "transition": {
+        "$token": "springs.faqLayout",
+        "measuredSettleMs": 400
+      },
+      "measuredExample": {
+        "closedHeightPx": 72,
+        "openHeightPx": 172.78,
+        "answerHeightPx": 76.78,
+        "heightAt40Ms": 91.27,
+        "heightAt100Ms": 143.83,
+        "heightAt200Ms": 170.88
+      },
+      "defaultOpenRows": [
+        "Do I need any technical skills to get started?",
+        "Is my customer data secure?"
+      ],
+      "clickBehavior": "Rows are independent; opening one does not close the other column's default-open row.",
+      "videoObservation": "No FAQ state change occurs during the 43.2–45.3s hold.",
+      "reducedMotion": "Mount/unmount answer instantly while preserving disclosure semantics.",
+      "confidence": "high"
+    },
+    {
+      "id": "form.input-focus",
+      "section": "footer trial form",
+      "event": "focus",
+      "behavior": "No computed color, border, transform, shadow, or outline animation change was detected.",
+      "implementationRequirement": "Add a visible static :focus-visible ring for accessibility without introducing motion.",
+      "reducedMotion": "Same static focus treatment.",
+      "confidence": "high"
+    },
+    {
+      "id": "cards.noninteractive",
+      "section": "features/benefits/blog",
+      "event": "hover",
+      "behavior": "No authored hover variant was detected on the content cards themselves. Do not add lift, scale, tilt, or glow unless a later capture proves it.",
+      "reducedMotion": "No change because there is no authored motion.",
+      "confidence": "high"
+    }
+  ],
+  "responsive": {
+    "measuredPageHeightsCss": {
+      "1920x975": 11835,
+      "1200x800": 11835,
+      "1024x768": 12045,
+      "810x760": 12205,
+      "809x760": 14695,
+      "768x740": 14695,
+      "390x844": 15757
+    },
+    "rules": [
+      "Desktop workflow triggers exist only at >=1200px.",
+      "At <=1199.98px workflow cards are a static vertical stack and the two 878px trigger blocks are absent.",
+      "At <=809.98px desktop navigation becomes an expandable mobile panel.",
+      "At <=809.98px testimonials switch from fan variants to a left-moving ticker.",
+      "Once-only viewport reveals remain once-only at all breakpoints unless reduced motion disables them."
+    ]
+  },
+  "reducedMotion": {
+    "referenceBehavior": {
+      "supported": false,
+      "test": "Chromium context with prefers-reduced-motion: reduce",
+      "result": "The same 18 hero animations were present at 100ms with 600ms/1120ms durations."
+    },
+    "requiredImplementation": [
+      "Disable Lenis and use native scroll.",
+      "Render hero and section reveals in their target state.",
+      "Render counters at final values.",
+      "Render About text fully white without scroll linkage.",
+      "Replace workflow sticky triggers with the static stack.",
+      "Stop logo marquee and testimonial autoplay/ticker.",
+      "Keep direct navigation, dropdown, FAQ, and pagination usable with instant state changes."
+    ]
+  },
+  "implementationOrder": [
+    "Install the global motion tokens and reduced-motion switch.",
+    "Match the effective desktop viewport and fixed header geometry.",
+    "Implement Lenis 0.6s scroll smoothing only for no-preference pointer environments.",
+    "Implement hero hydration stagger.",
+    "Implement once-only section/item/illustration reveals.",
+    "Implement About character-color scroll linkage and counters.",
+    "Replace any horizontal workflow translation with native sticky plus three 50% intersection targets and 500px vertical card variants.",
+    "Implement testimonial desktop timer/pagination and phone ticker variants.",
+    "Implement buttons, All Pages dropdown, mobile nav, and FAQ springs.",
+    "Verify the exact forward/reverse sequence against the supplied contact sheets and the video scrollbar timeline."
+  ],
+  "doNotInvent": [
+    "Do not add generic card hover lift or glow.",
+    "Do not replay once-only reveals on upward scroll.",
+    "Do not implement the workflow as horizontal scroll or continuous parallax.",
+    "Do not treat pre-sampled WAAPI springs as linear tweens.",
+    "Do not include Framer/Pentaclay promotional badges in the product implementation."
+  ]
+}

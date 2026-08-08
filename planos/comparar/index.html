@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#04050e" />
+    <link rel="canonical" href="/planos/comparar" data-canonical />
+    <meta name="description" content="Compare preços, limites e recursos dos planos Essencial, Profissional e Enterprise do Licitabase." />
+    <link rel="icon" type="image/png" href="/assets/images/licitabase-icon.png" />
+    <title>Comparar planos — Licitabase</title>
+    <script>
+      (() => {
+        const isLight = window.location.pathname.startsWith('/light/');
+        const theme = isLight ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isLight ? '#F4F7F5' : '#04050E');
+        document.querySelector('[data-canonical]')?.setAttribute('href', '/planos/comparar');
+        window.__LICITABASE_THEME__ = theme;
+      })();
+      document.documentElement.classList.add('js');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('reduced-motion');
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/pricing.css" />
+    <link rel="stylesheet" href="/accessibility-typography.css" />
+    <link rel="stylesheet" href="/theme-light.css" />
+    <script src="/pricing-data.js" defer></script>
+    <script src="/pricing.js" defer></script>
+  </head>
+  <body class="pricing-compare-page">
+    <a class="skip-link" href="#comparison-main">Ir para a comparação</a>
+
+    <header class="comparison-topbar">
+      <div class="container comparison-topbar__inner">
+        <a class="brand" href="/" aria-label="Página inicial do Licitabase">
+          <span class="brand-mark" aria-hidden="true"><img src="/assets/images/licitabase-icon.png" alt="" width="2841" height="3301" /></span>
+          <span>Licitabase</span>
+        </a>
+        <a class="comparison-back" href="/?ciclo=monthly#pricing" data-pricing-back>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14M14 7l5 5-5 5" /></svg>
+          <span>Voltar para os planos</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="comparison-main" id="comparison-main" data-pricing-root data-pricing-mode="comparison">
+      <div class="container">
+        <header class="comparison-heading">
+          <div class="eyebrow">Planos lado a lado</div>
+          <h1>Comparar todos os recursos dos planos</h1>
+          <p>Escolha o plano ideal para a realidade da sua empresa. Todos os recursos, limites e benefícios organizados para facilitar sua decisão.</p>
+        </header>
+
+        <fieldset class="pricing-cycle">
+          <legend class="sr-only">Escolha o ciclo de cobrança</legend>
+          <div class="pricing-cycle__control" role="group" aria-label="Ciclo de cobrança">
+            <button class="is-active" type="button" data-pricing-cycle="monthly" aria-pressed="true">Mensal</button>
+            <button type="button" data-pricing-cycle="annual" aria-pressed="false">Anual <span class="pricing-cycle__saving">Economize até 17%</span></button>
+          </div>
+        </fieldset>
+
+        <div class="comparison-table-shell" tabindex="0" aria-label="Tabela comparativa dos planos; deslize horizontalmente em telas menores">
+          <table class="comparison-table">
+            <caption class="sr-only">Comparação completa dos planos Essencial, Profissional e Enterprise</caption>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div class="comparison-intro">
+                    <span class="comparison-intro__icon">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3v18M6 6h12M5 6l-3 6h6L5 6ZM19 6l-3 6h6l-3-6ZM3 12a3 3 0 0 0 5 0M16 12a3 3 0 0 0 6 0M8 21h8" /></svg>
+                    </span>
+                    <span><strong>Compare lado a lado</strong><small>Escolha o plano certo para sua operação</small></span>
+                  </div>
+                </th>
+                <th scope="col" data-plan-id="essential">
+                  <div class="comparison-plan-head">
+                    <strong>Essencial</strong>
+                    <div class="comparison-plan-price"><span>R$</span><strong data-plan-price>99</strong><span>/mês</span></div>
+                    <p data-plan-billing hidden></p>
+                  </div>
+                </th>
+                <th scope="col" data-plan-id="professional">
+                  <div class="comparison-plan-head">
+                    <span class="comparison-plan-head__badge">Mais escolhido</span>
+                    <strong>Profissional</strong>
+                    <div class="comparison-plan-price"><span>R$</span><strong data-plan-price>299</strong><span>/mês</span></div>
+                    <p data-plan-billing hidden></p>
+                  </div>
+                </th>
+                <th scope="col" data-plan-id="enterprise">
+                  <div class="comparison-plan-head">
+                    <strong>Enterprise</strong>
+                    <div class="comparison-plan-price"><span>R$</span><strong data-plan-price>997</strong><span>/mês</span></div>
+                    <p data-plan-billing hidden></p>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody data-comparison-body></tbody>
+            <tfoot>
+              <tr>
+                <td>Escolha seu plano e comece hoje.</td>
+                <td><a class="button button-secondary" href="/#trial">Escolher Essencial</a></td>
+                <td><a class="button button-primary" href="/#trial">Escolher Profissional</a></td>
+                <td><a class="button button-secondary" href="/#footer">Falar com o time</a></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="comparison-help">
+          <a href="/#footer"><span aria-hidden="true">●</span> Ainda em dúvida? Fale com um especialista <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

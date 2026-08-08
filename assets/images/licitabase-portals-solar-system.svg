@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="540" viewBox="0 0 760 540" role="img" aria-labelledby="title desc">
+  <title id="title">Sistema orbital de portais do Licitabase</title>
+  <desc id="desc">PNCP, BLL, BNC, PCP, Compras.gov e Licitanet orbitam o núcleo central do Licitabase.</desc>
+
+  <style>
+    .orbit-motion {
+      transform-box: view-box;
+      transform-origin: 380px 270px;
+      will-change: transform;
+    }
+
+    .keep-upright {
+      transform-box: fill-box;
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    .orbit-inner, .orbit-middle, .orbit-outer { animation: orbit-clockwise 28s linear infinite; }
+    .orbit-inner .keep-upright,
+    .orbit-middle .keep-upright,
+    .orbit-outer .keep-upright { animation: orbit-counterclockwise 28s linear infinite; }
+
+    @keyframes orbit-clockwise {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes orbit-counterclockwise {
+      to { transform: rotate(-360deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .orbit-motion,
+      .keep-upright {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#07b852" stop-opacity="0.18" />
+      <stop offset="0.58" stop-color="#07b852" stop-opacity="0.05" />
+      <stop offset="1" stop-color="#07b852" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="portal-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1119" stop-opacity="0.98" />
+      <stop offset="1" stop-color="#050810" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="hub-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a2418" stop-opacity="0.99" />
+      <stop offset="1" stop-color="#030c08" stop-opacity="0.99" />
+    </linearGradient>
+    <filter id="portal-shadow" x="-30%" y="-70%" width="160%" height="240%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#000000" flood-opacity="0.42" />
+    </filter>
+    <filter id="core-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="11" result="blur" />
+      <feFlood flood-color="#07b852" flood-opacity="0.3" />
+      <feComposite in2="blur" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="380" cy="270" r="266" fill="url(#ambient)" />
+
+  <g fill="none" stroke="#07b852">
+    <circle cx="380" cy="270" r="150" stroke-width="1.8" stroke-opacity="0.38" stroke-dasharray="3 8" />
+    <circle cx="380" cy="270" r="178" stroke-width="1.5" stroke-opacity="0.27" stroke-dasharray="2 9" />
+    <circle cx="380" cy="270" r="240" stroke-width="1.3" stroke-opacity="0.2" stroke-dasharray="2 10" />
+  </g>
+
+  <g class="orbit-motion orbit-inner">
+    <g transform="translate(380 120)">
+      <g class="keep-upright" filter="url(#portal-shadow)">
+        <rect x="-64" y="-32" width="128" height="64" rx="32" fill="url(#portal-surface)" stroke="#12d663" stroke-opacity="0.78" stroke-width="1.7" />
+        <text x="0" y="9" text-anchor="middle" fill="#ffffff" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">PNCP</text>
+      </g>
+    </g>
+    <g transform="translate(380 420)">
+      <g class="keep-upright" filter="url(#portal-shadow)">
+        <rect x="-55" y="-31" width="110" height="62" rx="31" fill="url(#portal-surface)" stroke="#12d663" stroke-opacity="0.78" stroke-width="1.7" />
+        <text x="0" y="9" text-anchor="middle" fill="#ffffff" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">BLL</text>
+      </g>
+    </g>
+  </g>
+
+  <g class="orbit-motion orbit-middle">
+    <g transform="translate(534 181)">
+      <g class="keep-upright" filter="url(#portal-shadow)">
+        <rect x="-60" y="-31" width="120" height="62" rx="31" fill="url(#portal-surface)" stroke="#12d663" stroke-opacity="0.74" stroke-width="1.7" />
+        <text x="0" y="9" text-anchor="middle" fill="#ffffff" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">BNC</text>
+      </g>
+    </g>
+    <g transform="translate(226 359)">
+      <g class="keep-upright" filter="url(#portal-shadow)">
+        <rect x="-60" y="-31" width="120" height="62" rx="31" fill="url(#portal-surface)" stroke="#12d663" stroke-opacity="0.74" stroke-width="1.7" />
+        <text x="0" y="9" text-anchor="middle" fill="#ffffff" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">PCP</text>
+      </g>
+    </g>
+  </g>
+
+  <g class="orbit-motion orbit-outer">
+    <g transform="translate(172 150)">
+      <g class="keep-upright" filter="url(#portal-shadow)">
+        <rect x="-107" y="-33" width="214" height="66" rx="33" fill="url(#portal-surface)" stroke="#12d663" stroke-opacity="0.7" stroke-width="1.7" />
+        <text x="0" y="9" text-anchor="middle" fill="#ffffff" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="25" font-weight="600">Compras.gov</text>
+      </g>
+    </g>
+    <g transform="translate(588 390)">
+      <g class="keep-upright" filter="url(#portal-shadow)">
+        <rect x="-84" y="-32" width="168" height="64" rx="32" fill="url(#portal-surface)" stroke="#12d663" stroke-opacity="0.7" stroke-width="1.7" />
+        <text x="0" y="9" text-anchor="middle" fill="#ffffff" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600">Licitanet</text>
+      </g>
+    </g>
+  </g>
+
+  <g filter="url(#core-glow)">
+    <circle cx="380" cy="270" r="88" fill="none" stroke="#07b852" stroke-opacity="0.2" stroke-width="1.5" />
+    <circle cx="380" cy="270" r="76" fill="url(#hub-surface)" stroke="#17dc69" stroke-opacity="0.85" stroke-width="2.2" />
+    <circle cx="380" cy="270" r="61" fill="#06100b" stroke="#07b852" stroke-opacity="0.34" />
+    <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABECAYAAADQkyaZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAdBSURBVGhD7dp5TBRnFABwys5wwwoKjWmapodt2qa2lltFbtjd+WZ2OZJ6H2i9CygV8BZvUVsVtQossiygUkStadM0Ta1aWsSr2tL4R5PW/jNpbWqTpk3/e33f7iwuy16ws1vQfcnLJmSA75f3zfsOCPBmkOtEx1/nL+r6dL9yX3N7pS8/OsF9yU3gr/Fndd/rQPedDrTfagGhkH8pf7z0yCiPzQGBpJeswSr+VfBDAXDfcCYg/RRuCMD38CnSk6M3uB4ujb/BXy28WwhYTeC6JaQFeksATY8mU3p89AV3hYvGKtYJNwXTNO3HWSdC6fTFimZJ3za6guvlpuM0/ZlWkVwlA6v4KEBx4KZmU9BXYJqSDoGWHHVQR83GVY4mqKnZXOd77TYbVzkaoG41G1c50qE4sBlYvXsum42rHKlQ9WX1i7h9O+d2s3GVIw6KzQYrWDnkZuMqRxIUB5Qz7GbjKkcCVNWjiiLXiFF7WwvaO+bNt+xpgXb/j1AcyJnin4qB9GCzsTdIOXJEQLu5P3HK2h+gXDkSoJpuze+PC/S+HypX+qE+DD9UzvRDfRh+qJzph/ow/FA50w/1YfihcqYf6sPwQ+XMxw2q7lb7oV4PP1TO9EN9GL6C6m5j1+15xKH0T448/fvqHS5e+rW+D29DSQ9NApMMORC2KKlDMSN+r2J2fK1ibsIeRUnSLkVJ8k7FkuQdiuWp2xWlk7cpKqZuVVSn1yg2pm9htmRtZrZlbWJ2525k9uWtZw7kr2OOqNea8rimmqnXVDENXCVTT9Yweq6CaSSrmQayiqnnyhk9KWVahBWKE7zK61CeInHavt6YBaELkyBwXjIwi1KBWYy5bDIwK6YAU5YGTMU0YKoygNmQCUxNNrA7coGtzQf2fRWwdRpgjxFgG3lgm7XAGnXAthcAe7IQ2FOYp51nUGcxBDUSo9eg/FX8RORrxzMhpCQRnpgeD8ycBGDmJQKzIAnBiF6SglhElyG4AsFVCN6QAeyWTGC3I3gPgvfnAXsQwYfVwH6A6OMcsA0U7l4GtQgQrCf/egVqQuLnq0czIXh+IgTOcITEqlqQ1RZklnxIzJCOQgjVc1/JDqVI/Jnwcl0GBCHMJfJdM5K1IHfIhNQTCDYIENqqhRADSZUVSpHqKxp46QAOeu4QkTXWSHw/rZH1w0A2EQjrLILQRq5M1mbE93KguqyBCfvTgUXcAGSJhFwqIcstSHx2ow3yPRmQmGFniiBcz7WYkDTkgAqIzL+kgedr8T2bjciZDpArnSBrrZBHPER2FEC4gdwKOKgKlpieQyky76Iant01DRSzJCRO237k29bIqWbkWgfIQ54jQ9u0EN7KP1Dqueckojk8gQq9BHK/UMMz29NAMdMREpcPC3KNDXJnjrxIAw8Rp3UQ2cRpJN7DGC6UInM+V8PTNVPxfUwwVdNt5FYHyGNDQ9LlgyJDsPGEYkaeLYKIJs0GiTYwhgOlyOzPVPDUJoqMt49cJiFXWSE34UbAW8iuIog0kC6JNTiGCqXIzE9VMH79FAjE3U4/EjcGA5DvOEHuzcPtnXzICGw+Ua3kbuzh9AiJNTiGAhWuEcj4JB+erJ5s2tINRmLTsUWuc4VEoCfIdi1EtQt/x+hVr0gk++EWFPestJLTLuRDXKWExGXkIRKraIusxKXGGrnLClknE7KFB2VnASibuWKJ4zhcQenpgyLTzufBuIrUwciFiFzsBLkNlw9b5FGcqsNA0s5KkWEU2UxgzPkiUBo0OySK83AGtSCndOVBTLkbyNVWyM32kFhFOZAnEHkOkUbyscRwHY6gZiQHqZ25EF2aYj5m9SPxfbQglyOyFHc7jpD7bJB0cz5cJAIpkk7X6Db+x+iOHKXEcB32oBRJ964pp3NBuXIIyPW4RtoiD9hB2mAc5SAkTlflSS1EnxL+GdOsmigR3AtbKL36oKeQpPYciFqebEbSfaszJD0wWyN3O0A2eIhs5SHmLFbToH5LGr77YQ21IBOMORCx1AZJj1m2yAobJD0wewkZ1UJg7IUiGNviZvOxDQvUhMR805AN4YuT7CPpWbIfiWukBWm5+tiNux0TEjsrPWb1I+2D7CVdPgYhDYj8qAjGtZHz0rCHHgj9Q7hphr7RlEVv6pwjre93bJH0VsAbSJyu407yfbEdTnY+rgI3A/fov5lPrM+C0BI7yP5bARukvUssC5KeQDxERtJ3kiI/1EJsB/8gtoV/QRry8IK7wpVPOqWCEHz3AmdJDYfudBYhbgni6I1A/1RNt7rAwnfRcu1xCHFHJBwdeBO9mhSANbiXpps6zFCjgGdJASLbBVBijj2jg7hOLcQZSbY0XM8iaH5CWeCcxD6s4n1TLkgScbqK2HhErKSIlRSx8YhMVZqI01XESopYSREbj4iVFLHxiLjjEdmjahGxIi4hIlbTvWwkIjYfMURPxPAmImIlRWULEWPayG+xXbpf4oya2dIwPYiAgP8A9UcMOm1lfxsAAAAASUVORK5CYII=" x="342" y="226" width="76" height="88" preserveAspectRatio="xMidYMid meet" />
+  </g>
+</svg>

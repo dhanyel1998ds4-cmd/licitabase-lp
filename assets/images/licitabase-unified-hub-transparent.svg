@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540" role="img" aria-labelledby="title desc">
+  <title id="title">Dados organizados em um ambiente único</title>
+  <desc id="desc">O Licitabase conecta oportunidades, participações, prazos e alertas em um só ambiente.</desc>
+
+  <defs>
+    <linearGradient id="hub-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e4a2e" stop-opacity="0.76" />
+      <stop offset="0.52" stop-color="#0a281b" stop-opacity="0.64" />
+      <stop offset="1" stop-color="#04110b" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="node-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172029" stop-opacity="0.44" />
+      <stop offset="0.5" stop-color="#0a1117" stop-opacity="0.34" />
+      <stop offset="1" stop-color="#04090c" stop-opacity="0.26" />
+    </linearGradient>
+    <linearGradient id="hub-glass-sheen" x1="0" y1="0" x2="0.82" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.09" />
+      <stop offset="0.32" stop-color="#ffffff" stop-opacity="0.018" />
+      <stop offset="0.72" stop-color="#07b852" stop-opacity="0.03" />
+      <stop offset="1" stop-color="#07b852" stop-opacity="0.055" />
+    </linearGradient>
+    <linearGradient id="brand-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4bd04b" />
+      <stop offset="1" stop-color="#2daf3f" />
+    </linearGradient>
+    <linearGradient id="brand-dark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#046332" />
+      <stop offset="1" stop-color="#07b852" />
+    </linearGradient>
+    <filter id="hub-glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feFlood flood-color="#07b852" flood-opacity="0.2" />
+      <feComposite in2="blur" operator="in" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="node-shadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#000000" flood-opacity="0.22" />
+    </filter>
+    <filter id="hub-frost-blur" x="-45%" y="-80%" width="190%" height="260%">
+      <feGaussianBlur stdDeviation="24" />
+    </filter>
+  </defs>
+
+  <g filter="url(#hub-frost-blur)" opacity="0.46" aria-hidden="true">
+    <ellipse cx="170" cy="92" rx="136" ry="46" fill="#07b852" fill-opacity="0.045" />
+    <ellipse cx="750" cy="92" rx="136" ry="46" fill="#16dc6b" fill-opacity="0.04" />
+    <ellipse cx="460" cy="270" rx="192" ry="72" fill="#07b852" fill-opacity="0.22" />
+    <ellipse cx="170" cy="448" rx="136" ry="46" fill="#07b852" fill-opacity="0.04" />
+    <ellipse cx="750" cy="448" rx="136" ry="46" fill="#07b852" fill-opacity="0.045" />
+  </g>
+
+  <g fill="none" stroke="#4fa876" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 10" opacity="0.28">
+    <path d="M320 242H216c-26 0-46-21-46-46v-60" />
+    <path d="M600 242h104c26 0 46-21 46-46v-60" />
+    <path d="M320 298H216c-26 0-46 21-46 46v60" />
+    <path d="M600 298h104c26 0 46 21 46 46v60" />
+  </g>
+
+  <g filter="url(#node-shadow)">
+    <rect x="20" y="48" width="300" height="88" rx="30" fill="url(#node-surface)" stroke="#6b9e81" stroke-opacity="0.3" stroke-width="0.9" />
+    <rect x="22" y="50" width="296" height="84" rx="28" fill="url(#hub-glass-sheen)" />
+    <circle cx="70" cy="92" r="28" fill="#071916" fill-opacity="0.7" stroke="#ffffff" stroke-opacity="0.08" />
+    <g transform="translate(54 76)" fill="none" stroke="#55b17b" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 2h17l5 5v12" />
+      <path d="M22 2v6h6M5 2v27h12" />
+      <circle cx="23" cy="24" r="6" />
+      <path d="m27 28 4 4" />
+    </g>
+    <text x="112" y="101" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600">Oportunidades</text>
+  </g>
+
+  <g filter="url(#node-shadow)">
+    <rect x="600" y="48" width="300" height="88" rx="30" fill="url(#node-surface)" stroke="#6b9e81" stroke-opacity="0.3" stroke-width="0.9" />
+    <rect x="602" y="50" width="296" height="84" rx="28" fill="url(#hub-glass-sheen)" />
+    <circle cx="650" cy="92" r="28" fill="#071916" fill-opacity="0.7" stroke="#ffffff" stroke-opacity="0.08" />
+    <g transform="translate(634 76)" fill="none" stroke="#55b17b" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="9" r="6" />
+      <path d="M1 29c1-7 5-10 10-10s9 3 10 10" />
+      <path d="m21 14 4 4 7-9" />
+    </g>
+    <text x="692" y="101" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600">Participações</text>
+  </g>
+
+  <g filter="url(#node-shadow)">
+    <rect x="20" y="404" width="300" height="88" rx="30" fill="url(#node-surface)" stroke="#6b9e81" stroke-opacity="0.3" stroke-width="0.9" />
+    <rect x="22" y="406" width="296" height="84" rx="28" fill="url(#hub-glass-sheen)" />
+    <circle cx="70" cy="448" r="28" fill="#071916" fill-opacity="0.7" stroke="#ffffff" stroke-opacity="0.08" />
+    <g transform="translate(55 433)" fill="none" stroke="#55b17b" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="1" y="5" width="28" height="25" rx="5" />
+      <path d="M1 12h28M9 1v8M21 1v8" />
+      <path d="M9 18h4M18 18h4M9 24h4" />
+    </g>
+    <text x="112" y="457" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600">Prazos</text>
+  </g>
+
+  <g filter="url(#node-shadow)">
+    <rect x="600" y="404" width="300" height="88" rx="30" fill="url(#node-surface)" stroke="#6b9e81" stroke-opacity="0.3" stroke-width="0.9" />
+    <rect x="602" y="406" width="296" height="84" rx="28" fill="url(#hub-glass-sheen)" />
+    <circle cx="650" cy="448" r="28" fill="#071916" fill-opacity="0.7" stroke="#ffffff" stroke-opacity="0.08" />
+    <g transform="translate(636 433)" fill="none" stroke="#55b17b" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 22h20l-3-5v-6a7 7 0 0 0-14 0v6l-3 5Z" />
+      <path d="M11 27a4 4 0 0 0 6 0" />
+      <path d="M25 4c3 3 4 6 4 9M3 4C0 7-1 10-1 13" />
+    </g>
+    <text x="692" y="457" fill="#d8dddf" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600">Alertas</text>
+  </g>
+
+  <g filter="url(#hub-glow)">
+    <rect x="320" y="206" width="280" height="128" rx="34" fill="url(#hub-surface)" stroke="#16dc6b" stroke-opacity="0.76" stroke-width="1.2" />
+    <rect x="322" y="208" width="276" height="124" rx="32" fill="url(#hub-glass-sheen)" stroke="#ffffff" stroke-opacity="0.055" stroke-width="0.6" />
+    <circle cx="382" cy="270" r="42" fill="#061810" fill-opacity="0.68" stroke="#ffffff" stroke-opacity="0.1" />
+    <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABECAYAAADQkyaZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAdBSURBVGhD7dp5TBRnFABwys5wwwoKjWmapodt2qa2lltFbtjd+WZ2OZJ6H2i9CygV8BZvUVsVtQossiygUkStadM0Ta1aWsSr2tL4R5PW/jNpbWqTpk3/e33f7iwuy16ws1vQfcnLJmSA75f3zfsOCPBmkOtEx1/nL+r6dL9yX3N7pS8/OsF9yU3gr/Fndd/rQPedDrTfagGhkH8pf7z0yCiPzQGBpJeswSr+VfBDAXDfcCYg/RRuCMD38CnSk6M3uB4ujb/BXy28WwhYTeC6JaQFeksATY8mU3p89AV3hYvGKtYJNwXTNO3HWSdC6fTFimZJ3za6guvlpuM0/ZlWkVwlA6v4KEBx4KZmU9BXYJqSDoGWHHVQR83GVY4mqKnZXOd77TYbVzkaoG41G1c50qE4sBlYvXsum42rHKlQ9WX1i7h9O+d2s3GVIw6KzQYrWDnkZuMqRxIUB5Qz7GbjKkcCVNWjiiLXiFF7WwvaO+bNt+xpgXb/j1AcyJnin4qB9GCzsTdIOXJEQLu5P3HK2h+gXDkSoJpuze+PC/S+HypX+qE+DD9UzvRDfRh+qJzph/ow/FA50w/1YfihcqYf6sPwQ+XMxw2q7lb7oV4PP1TO9EN9GL6C6m5j1+15xKH0T448/fvqHS5e+rW+D29DSQ9NApMMORC2KKlDMSN+r2J2fK1ibsIeRUnSLkVJ8k7FkuQdiuWp2xWlk7cpKqZuVVSn1yg2pm9htmRtZrZlbWJ2525k9uWtZw7kr2OOqNea8rimmqnXVDENXCVTT9Yweq6CaSSrmQayiqnnyhk9KWVahBWKE7zK61CeInHavt6YBaELkyBwXjIwi1KBWYy5bDIwK6YAU5YGTMU0YKoygNmQCUxNNrA7coGtzQf2fRWwdRpgjxFgG3lgm7XAGnXAthcAe7IQ2FOYp51nUGcxBDUSo9eg/FX8RORrxzMhpCQRnpgeD8ycBGDmJQKzIAnBiF6SglhElyG4AsFVCN6QAeyWTGC3I3gPgvfnAXsQwYfVwH6A6OMcsA0U7l4GtQgQrCf/egVqQuLnq0czIXh+IgTOcITEqlqQ1RZklnxIzJCOQgjVc1/JDqVI/Jnwcl0GBCHMJfJdM5K1IHfIhNQTCDYIENqqhRADSZUVSpHqKxp46QAOeu4QkTXWSHw/rZH1w0A2EQjrLILQRq5M1mbE93KguqyBCfvTgUXcAGSJhFwqIcstSHx2ow3yPRmQmGFniiBcz7WYkDTkgAqIzL+kgedr8T2bjciZDpArnSBrrZBHPER2FEC4gdwKOKgKlpieQyky76Iant01DRSzJCRO237k29bIqWbkWgfIQ54jQ9u0EN7KP1Dqueckojk8gQq9BHK/UMMz29NAMdMREpcPC3KNDXJnjrxIAw8Rp3UQ2cRpJN7DGC6UInM+V8PTNVPxfUwwVdNt5FYHyGNDQ9LlgyJDsPGEYkaeLYKIJs0GiTYwhgOlyOzPVPDUJoqMt49cJiFXWSE34UbAW8iuIog0kC6JNTiGCqXIzE9VMH79FAjE3U4/EjcGA5DvOEHuzcPtnXzICGw+Ua3kbuzh9AiJNTiGAhWuEcj4JB+erJ5s2tINRmLTsUWuc4VEoCfIdi1EtQt/x+hVr0gk++EWFPestJLTLuRDXKWExGXkIRKraIusxKXGGrnLClknE7KFB2VnASibuWKJ4zhcQenpgyLTzufBuIrUwciFiFzsBLkNlw9b5FGcqsNA0s5KkWEU2UxgzPkiUBo0OySK83AGtSCndOVBTLkbyNVWyM32kFhFOZAnEHkOkUbyscRwHY6gZiQHqZ25EF2aYj5m9SPxfbQglyOyFHc7jpD7bJB0cz5cJAIpkk7X6Db+x+iOHKXEcB32oBRJ964pp3NBuXIIyPW4RtoiD9hB2mAc5SAkTlflSS1EnxL+GdOsmigR3AtbKL36oKeQpPYciFqebEbSfaszJD0wWyN3O0A2eIhs5SHmLFbToH5LGr77YQ21IBOMORCx1AZJj1m2yAobJD0wewkZ1UJg7IUiGNviZvOxDQvUhMR805AN4YuT7CPpWbIfiWukBWm5+tiNux0TEjsrPWb1I+2D7CVdPgYhDYj8qAjGtZHz0rCHHgj9Q7hphr7RlEVv6pwjre93bJH0VsAbSJyu407yfbEdTnY+rgI3A/fov5lPrM+C0BI7yP5bARukvUssC5KeQDxERtJ3kiI/1EJsB/8gtoV/QRry8IK7wpVPOqWCEHz3AmdJDYfudBYhbgni6I1A/1RNt7rAwnfRcu1xCHFHJBwdeBO9mhSANbiXpps6zFCjgGdJASLbBVBijj2jg7hOLcQZSbY0XM8iaH5CWeCcxD6s4n1TLkgScbqK2HhErKSIlRSx8YhMVZqI01XESopYSREbj4iVFLHxiLjjEdmjahGxIi4hIlbTvWwkIjYfMURPxPAmImIlRWULEWPayG+xXbpf4oya2dIwPYiAgP8A9UcMOm1lfxsAAAAASUVORK5CYII=" x="353" y="236" width="58" height="68" preserveAspectRatio="xMidYMid meet" />
+    <text x="438" y="264" fill="#ffffff" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">Licitabase</text>
+    <text x="438" y="292" fill="#51d989" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500">Ambiente único</text>
+  </g>
+</svg>
