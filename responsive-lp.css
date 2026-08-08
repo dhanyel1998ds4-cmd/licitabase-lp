@@ -81,7 +81,21 @@
 .landing-page .announcement {
   width: fit-content;
   max-width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.landing-page .announcement .announcement-message {
+  min-width: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+}
+
+.landing-page .announcement-message--short {
+  display: none;
 }
 
 .landing-page .hero h1 {
@@ -152,7 +166,12 @@
 }
 
 .landing-page .platform-logo {
+  display: inline-flex;
   min-width: clamp(168px, 20vw, 220px);
+  align-items: center;
+  justify-content: center;
+  padding-block: 0;
+  line-height: 1.2;
 }
 
 /* About and platform statistics */
@@ -384,6 +403,14 @@ html[data-theme="dark"] .landing-page .platform-orbit-light {
   .landing-page .announcement {
     gap: 6px;
     padding-right: 9px;
+  }
+
+  .landing-page .announcement-message--full {
+    display: none;
+  }
+
+  .landing-page .announcement .announcement-message--short {
+    display: inline;
   }
 
   .landing-page .hero h1 {

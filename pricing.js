@@ -101,7 +101,7 @@
       ${group.rows.map((row) => `
         <tr class="comparison-feature-row">
           <th scope="row">${row.label}</th>
-          ${row.values.map((value) => `<td>${comparisonValue(value)}</td>`).join('')}
+          ${row.values.map((value, planIndex) => `<td data-plan-label="${catalog.plans[planIndex].name}">${comparisonValue(value)}</td>`).join('')}
         </tr>`).join('')}
     `).join('');
   }

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/pricing.css" />
     <link rel="stylesheet" href="/accessibility-typography.css" />
     <link rel="stylesheet" href="/theme-light.css" />
+    <link rel="stylesheet" href="/responsive-comparison.css" />
     <script src="/pricing-data.js" defer></script>
     <script src="/pricing.js" defer></script>
   </head>
@@ -58,11 +59,11 @@
           <legend class="sr-only">Escolha o ciclo de cobrança</legend>
           <div class="pricing-cycle__control" role="group" aria-label="Ciclo de cobrança">
             <button class="is-active" type="button" data-pricing-cycle="monthly" aria-pressed="true">Mensal</button>
-            <button type="button" data-pricing-cycle="annual" aria-pressed="false">Anual <span class="pricing-cycle__saving">Economize até 17%</span></button>
+            <button type="button" data-pricing-cycle="annual" aria-pressed="false">Anual <span class="pricing-cycle__saving" data-short-label="-17%">Economize até 17%</span></button>
           </div>
         </fieldset>
 
-        <div class="comparison-table-shell" tabindex="0" aria-label="Tabela comparativa dos planos; deslize horizontalmente em telas menores">
+        <div class="comparison-table-shell" tabindex="0" aria-label="Tabela comparativa dos planos Essencial, Profissional e Enterprise">
           <table class="comparison-table">
             <caption class="sr-only">Comparação completa dos planos Essencial, Profissional e Enterprise</caption>
             <thead>
