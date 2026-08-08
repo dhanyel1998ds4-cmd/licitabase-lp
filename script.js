@@ -354,6 +354,7 @@ function setupWorkflow() {
   let thresholds = [];
   let desktopRevealDistances = [];
   let mobileMarkerCenters = [];
+  let mobileTimelineGeometry = null;
   let scheduled = false;
 
   const clearDesktopWorkflow = (complete = false) => {
@@ -372,6 +373,7 @@ function setupWorkflow() {
 
   const clearMobileTimeline = () => {
     mobileMarkerCenters = [];
+    mobileTimelineGeometry = null;
     mobileRail.style.removeProperty('top');
     mobileRail.style.removeProperty('height');
     mobileRail.style.setProperty('--mobile-timeline-progress', '0');
@@ -392,7 +394,18 @@ function setupWorkflow() {
       };
     });
     const start = mobileMarkerCenters[0]?.trackY ?? 0;
-    const end = mobileMarkerCenters.at(-1)?.trackY ?? start;
+    const lastMarker = mobileMarkerCenters.at(-1);
+    const lastCardRect = cards.at(-1)?.getBoundingClientRect();
+    const lastMarkerTrackY = lastMarker?.trackY ?? start;
+    const lastCardBottom = lastCardRect
+      ? lastCardRect.bottom - trackRect.top
+      : lastMarkerTrackY;
+    const end = Math.max(lastMarkerTrackY, lastCardBottom + 32);
+    mobileTimelineGeometry = {
+      start,
+      end,
+      lastMarkerTrackY,
+    };
     mobileRail.style.top = `${start}px`;
     mobileRail.style.height = `${Math.max(0, end - start)}px`;
   };
@@ -489,7 +502,16 @@ function setupWorkflow() {
     const last = mobileMarkerCenters.at(-1)?.documentY ?? first;
     const activationY = window.scrollY + window.innerHeight * 0.45;
     const distance = last - first;
-    const progress = distance > 0 ? clamp((activationY - first) / distance) : 0;
+    const markerProgress = distance > 0 ? clamp((activationY - first) / distance) : 0;
+    const geometry = mobileTimelineGeometry;
+    const railDistance = geometry ? geometry.end - geometry.start : distance;
+    const activeDistance = geometry
+      ? geometry.lastMarkerTrackY - geometry.start
+      : distance;
+    const fillDistance = activationY >= last
+      ? railDistance
+      : activeDistance * markerProgress;
+    const progress = railDistance > 0 ? clamp(fillDistance / railDistance) : 0;
     mobileRail.style.setProperty('--mobile-timeline-progress', String(progress));
     mobileMarkers.forEach((marker, index) => {
       marker.classList.toggle('is-active', activationY >= mobileMarkerCenters[index].documentY);
