@@ -1,0 +1,10 @@
+.git/
+.vercel/
+.env*
+dist/
+reference/
+verification/
+visual-comparison/
+motion-analysis/
+node_modules/
+*.log
