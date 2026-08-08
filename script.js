@@ -1,7 +1,7 @@
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const reduceMotion = reducedMotionQuery.matches;
-const desktopWorkflowQuery = window.matchMedia('(min-width: 1200px)');
-const phoneQuery = window.matchMedia('(max-width: 809.98px)');
+const desktopWorkflowQuery = window.matchMedia('(min-width: 1024px)');
+const phoneQuery = window.matchMedia('(max-width: 1023.98px)');
 
 function setupThemeAssets() {
   if (document.documentElement.dataset.theme !== 'light') return;

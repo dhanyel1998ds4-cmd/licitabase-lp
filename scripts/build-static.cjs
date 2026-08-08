@@ -9,6 +9,7 @@ const files = [
   'pricing.css',
   'accessibility-typography.css',
   'theme-light.css',
+  'responsive-lp.css',
   'script.js',
   'pricing-data.js',
   'pricing.js',

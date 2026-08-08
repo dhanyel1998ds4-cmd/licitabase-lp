@@ -1,0 +1,1049 @@
+/*
+ * Landing page responsive system.
+ * This layer is intentionally loaded last and scoped to .landing-page so the
+ * plan comparison route keeps its independent layout.
+ */
+
+.landing-page {
+  --lp-gutter: clamp(16px, 4vw, 48px);
+  --lp-section-space: clamp(72px, 8vw, 112px);
+  --lp-card-gap: clamp(14px, 2vw, 24px);
+}
+
+.landing-page .container {
+  width: min(calc(100% - (var(--lp-gutter) * 2)), var(--container));
+}
+
+.landing-page :is(section, footer, [id]) {
+  scroll-margin-top: 92px;
+}
+
+.landing-page .section {
+  padding-block: var(--lp-section-space);
+}
+
+.landing-page :is(
+  .about,
+  .features,
+  .advantages,
+  .command-center,
+  .pricing-section,
+  .pricing-suite,
+  .cta-section,
+  .faq,
+  .footer
+) {
+  height: auto;
+  min-height: 0;
+}
+
+.landing-page :is(.surface, .feature-card, .feature-wide, .pricing-card, .command-feature-card) {
+  min-width: 0;
+}
+
+/* Header */
+.landing-page .site-header {
+  top: 0;
+}
+
+.landing-page .nav-shell {
+  min-height: 66px;
+}
+
+.landing-page .mobile-menu {
+  width: min(calc(100% - (var(--lp-gutter) * 2)), 680px);
+  max-height: calc(100dvh - 84px);
+  overflow-y: auto;
+}
+
+/* Hero: natural vertical flow below desktop, editorial composition above it. */
+.landing-page .hero,
+.landing-page .hero-grid {
+  min-height: 0;
+}
+
+.landing-page .hero {
+  padding-bottom: clamp(54px, 8vw, 84px);
+}
+
+.landing-page .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  padding-top: clamp(112px, 15vw, 144px);
+}
+
+.landing-page .hero-copy {
+  top: auto;
+  width: min(100%, 720px);
+}
+
+.landing-page .announcement {
+  width: fit-content;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.landing-page .hero h1 {
+  max-width: 18ch;
+  margin-bottom: clamp(20px, 3vw, 28px);
+  font-size: clamp(2.125rem, 1.82rem + 1.55vw, 2.75rem);
+  line-height: 1.18;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+.landing-page .hero-break {
+  display: none;
+}
+
+.landing-page .hero-intro {
+  width: min(100%, 35rem);
+  max-width: none;
+  margin-bottom: clamp(28px, 4vw, 42px);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  line-height: 1.65;
+}
+
+.landing-page .hero-actions {
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.landing-page .hero-actions .button {
+  min-height: 52px;
+}
+
+.landing-page .trusted {
+  margin-top: clamp(28px, 4vw, 42px);
+}
+
+.landing-page .hero-visual {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: min(1055px, calc(100vw - (var(--lp-gutter) * 2)));
+  max-width: none;
+  margin-top: clamp(38px, 6vw, 64px);
+  transform: none;
+}
+
+.landing-page .hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Connected sources */
+.landing-page .company-strip {
+  min-height: 0;
+  padding-block: clamp(52px, 7vw, 82px);
+}
+
+.landing-page .company-strip p {
+  display: block;
+  margin-bottom: clamp(22px, 3vw, 32px);
+}
+
+.landing-page .logo-marquee {
+  width: calc(100% + (var(--lp-gutter) * 2));
+  margin-left: calc(var(--lp-gutter) * -1);
+}
+
+.landing-page .platform-logo {
+  min-width: clamp(168px, 20vw, 220px);
+}
+
+/* About and platform statistics */
+.landing-page .about {
+  padding-block: var(--lp-section-space);
+}
+
+.landing-page .about-panel {
+  min-height: 0;
+  padding: clamp(34px, 5vw, 70px) clamp(20px, 4vw, 44px) clamp(24px, 4vw, 42px);
+}
+
+.landing-page .about-copy {
+  max-width: 62rem;
+}
+
+.landing-page .stats {
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: clamp(32px, 5vw, 52px);
+}
+
+.landing-page .stats article {
+  min-height: 0;
+  padding: 22px;
+}
+
+.landing-page .stats p {
+  max-width: 28ch;
+}
+
+/* Feature bento */
+.landing-page .features {
+  padding-block: var(--lp-section-space);
+}
+
+.landing-page .feature-grid {
+  gap: var(--lp-card-gap);
+}
+
+.landing-page .feature-card,
+.landing-page .feature-wide {
+  height: auto;
+  min-height: 0;
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.landing-page .feature-card > img,
+.landing-page .feature-wide > img,
+.landing-page .platform-orbit-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 390px;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  object-fit: contain;
+}
+
+.landing-page .platform-orbit-light {
+  width: 100%;
+  height: auto;
+  max-height: 390px;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  object-fit: contain;
+}
+
+html[data-theme="dark"] .landing-page .platform-orbit-light {
+  display: none;
+}
+
+.landing-page .feature-wide {
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: clamp(24px, 4vw, 54px);
+}
+
+.landing-page .feature-wide > img {
+  margin: 0;
+}
+
+.landing-page .orbit-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* How it works */
+.landing-page .how-section {
+  height: auto;
+  min-height: 0;
+  padding-block: var(--lp-section-space);
+}
+
+.landing-page .how-heading {
+  margin-bottom: clamp(38px, 5vw, 56px);
+}
+
+.landing-page .process-card {
+  height: auto;
+  min-height: 0;
+  padding: clamp(10px, 1.5vw, 17px);
+  aspect-ratio: 1 / 1;
+}
+
+.landing-page .process-card img {
+  width: min(100%, 306px);
+  max-width: 306px;
+}
+
+/* Command center */
+.landing-page .command-center {
+  padding-block: var(--lp-section-space);
+}
+
+.landing-page .command-center__heading {
+  margin-bottom: clamp(30px, 4vw, 44px);
+}
+
+.landing-page .command-feature-card {
+  height: auto;
+  min-height: 220px;
+}
+
+/* Pricing */
+.landing-page .pricing-suite {
+  padding-block: var(--lp-section-space);
+}
+
+.landing-page .pricing-cards {
+  align-items: stretch;
+}
+
+.landing-page .pricing-card,
+.landing-page .pricing-card--featured {
+  height: auto;
+  min-height: 0;
+}
+
+.landing-page .pricing-card__audience {
+  min-height: 0;
+}
+
+/* Final CTA */
+.landing-page .cta-section {
+  margin-top: 0;
+  padding-block: clamp(56px, 7vw, 96px);
+}
+
+.landing-page .cta-panel {
+  height: auto;
+  min-height: 0;
+}
+
+.landing-page .cta-visual {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.landing-page .cta-visual img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.landing-page .cta-copy {
+  width: auto;
+  max-width: 34rem;
+  padding: clamp(30px, 4vw, 52px);
+  transform: none;
+}
+
+.landing-page .cta-copy p {
+  margin-bottom: 30px;
+}
+
+/* FAQ and footer */
+.landing-page .faq {
+  padding-block: var(--lp-section-space);
+}
+
+.landing-page .faq-grid {
+  align-items: start;
+}
+
+.landing-page details,
+.landing-page summary {
+  min-height: 0;
+}
+
+.landing-page .footer {
+  padding-top: clamp(72px, 8vw, 104px);
+  padding-bottom: 24px;
+}
+
+.landing-page .trial {
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.landing-page .footer-grid {
+  gap: clamp(32px, 5vw, 70px);
+  margin-top: clamp(56px, 7vw, 82px);
+}
+
+.landing-page .footer-bottom {
+  padding-top: clamp(44px, 6vw, 76px);
+}
+
+/* Phones */
+@media (max-width: 479.98px) {
+  .landing-page {
+    --lp-gutter: 16px;
+    --lp-section-space: 68px;
+  }
+
+  .landing-page .nav-shell {
+    min-height: 62px;
+    padding-inline: var(--lp-gutter);
+  }
+
+  .landing-page .brand {
+    font-size: 21px;
+  }
+
+  .landing-page .hero-grid {
+    padding-top: 104px;
+  }
+
+  .landing-page .announcement {
+    gap: 6px;
+    padding-right: 9px;
+  }
+
+  .landing-page .hero h1 {
+    max-width: 16ch;
+    font-size: clamp(2.125rem, 1.82rem + 1.55vw, 2.375rem);
+  }
+
+  .landing-page .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .landing-page .hero-actions .button {
+    width: 100%;
+  }
+
+  .landing-page .hero-visual {
+    width: calc(100vw - var(--lp-gutter));
+    margin-right: calc(var(--lp-gutter) * -1);
+    border-radius: 18px 0 0 18px;
+  }
+
+  .landing-page .hero-visual img {
+    border-radius: 17px 0 0 17px;
+  }
+
+  .landing-page .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-page .feature-grid,
+  .landing-page .faq-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .landing-page .feature-wide {
+    display: block;
+  }
+
+  .landing-page .feature-wide .feature-quote {
+    margin-bottom: 24px;
+  }
+
+  .landing-page .command-feature-card__top {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+
+  .landing-page .command-feature-card__icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .landing-page .pricing-cycle__control {
+    width: 100%;
+  }
+
+  .landing-page .pricing-cycle button {
+    min-width: 0;
+    flex: 1 1 50%;
+  }
+
+  .landing-page .pricing-cycle__saving {
+    display: none;
+  }
+
+  .landing-page .pricing-card {
+    padding: 26px 20px 22px;
+  }
+
+  .landing-page .pricing-compare-link {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .landing-page .cta-copy {
+    padding: 30px 22px 38px;
+    text-align: center;
+  }
+
+  .landing-page .cta-copy .button {
+    width: 100%;
+  }
+
+  .landing-page .faq-heading {
+    max-width: none;
+  }
+
+  .landing-page summary {
+    min-height: 72px;
+    padding: 20px 50px 20px 18px;
+  }
+
+  .landing-page details p {
+    padding: 0 18px 22px;
+  }
+
+  .landing-page .trial {
+    grid-template-columns: minmax(0, 1fr);
+    text-align: left;
+  }
+
+  .landing-page .trial .pill {
+    margin-inline: 0;
+  }
+
+  .landing-page .input-shell {
+    height: auto;
+    padding: 4px;
+    border-radius: 18px;
+  }
+
+  .landing-page .input-shell input {
+    min-height: 52px;
+    padding-inline: 14px;
+  }
+
+  .landing-page .input-shell .button {
+    min-height: 48px;
+    padding-inline: 16px;
+  }
+
+  .landing-page .form-note {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .landing-page .form-status {
+    text-align: left;
+  }
+
+  .landing-page .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    text-align: left;
+  }
+
+  .landing-page .footer-brand,
+  .landing-page .brand-large {
+    margin-inline: 0;
+  }
+
+  .landing-page .footer-bottom,
+  .landing-page .footer-bottom div {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .landing-page .footer-bottom div {
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+}
+
+/* Larger phones and small tablets */
+@media (min-width: 480px) and (max-width: 767.98px) {
+  .landing-page .hero-actions {
+    flex-direction: row;
+  }
+
+  .landing-page .hero-actions .button {
+    width: auto;
+    flex: 1 1 220px;
+  }
+
+  .landing-page .stats,
+  .landing-page .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-page .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile and tablets: vertical workflow and content-first cards. */
+@media (max-width: 1023.98px) {
+  .landing-page .container,
+  .landing-page .mobile-menu {
+    width: min(calc(100% - (var(--lp-gutter) * 2)), var(--container));
+  }
+
+  .landing-page .nav-shell {
+    width: 100%;
+    padding-inline: var(--lp-gutter);
+  }
+
+  .landing-page .feature-card > img,
+  .landing-page .feature-wide > img,
+  .landing-page .platform-orbit-visual {
+    max-height: 360px;
+  }
+
+  .landing-page .platform-orbit-light {
+    max-height: 360px;
+  }
+
+  .landing-page .feature-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-page .feature-wide .feature-quote {
+    order: 2;
+  }
+
+  .landing-page .feature-wide > img {
+    order: 1;
+    margin-bottom: 22px;
+  }
+
+  .landing-page .workflow-scroll,
+  .landing-page .how-sticky,
+  .landing-page .how-window {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .landing-page .how-sticky {
+    position: static;
+    background: transparent;
+  }
+
+  .landing-page .step-line,
+  .landing-page .workflow-triggers {
+    display: none;
+  }
+
+  .landing-page .how-track {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(48px, 8vw, 72px);
+  }
+
+  .landing-page .how-card,
+  .landing-page .how-card:first-child,
+  .landing-page .how-card:last-child {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 48px;
+    transform: none !important;
+  }
+
+  .landing-page .how-card__step {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: #052516;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    transition: border-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+  }
+
+  .landing-page .how-card__step.is-active {
+    border-color: var(--accent);
+    box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.15);
+    color: #fff;
+  }
+
+  .landing-page .how-mobile-timeline {
+    position: absolute;
+    z-index: 0;
+    left: 16.5px;
+    display: block;
+    width: 1px;
+    height: 0;
+    overflow: hidden;
+    background: rgba(125, 132, 129, 0.34);
+    pointer-events: none;
+  }
+
+  .landing-page .how-mobile-timeline i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleY(var(--mobile-timeline-progress, 0));
+    transform-origin: 50% 0;
+    will-change: transform;
+  }
+
+  .landing-page .how-card h3 {
+    display: block;
+    min-height: 0;
+    margin: 0 0 16px;
+  }
+
+  .landing-page .how-card > p {
+    max-width: none;
+    margin: 24px 0 0;
+    text-align: left;
+  }
+
+  .landing-page .process-card {
+    width: min(100%, 560px);
+  }
+
+  .landing-page .command-tabs-shell {
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .landing-page .command-tabs-shell::-webkit-scrollbar {
+    display: none;
+  }
+
+  .landing-page .command-tabs {
+    display: flex;
+    width: max-content;
+    min-width: 100%;
+  }
+
+  .landing-page .command-tab {
+    min-width: 180px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .landing-page .command-tab:first-child {
+    min-width: 214px;
+  }
+
+  .landing-page .command-grid[data-layout] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-page .command-grid[data-layout] .command-feature-card,
+  .landing-page .command-grid[data-layout="inteligencia"] .command-feature-card:nth-child(4),
+  .landing-page .command-grid[data-layout="inteligencia"] .command-feature-card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .landing-page .pricing-cards {
+    grid-template-columns: minmax(0, 700px);
+    justify-content: center;
+  }
+
+  .landing-page .cta-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .landing-page .cta-visual,
+  .landing-page .cta-copy {
+    position: relative;
+    inset: auto;
+  }
+
+  .landing-page .cta-copy {
+    max-width: none;
+  }
+
+  .landing-page .faq-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .landing-page .trial {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .landing-page .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-page .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Compact laptops: full navigation and three-step workflow without crowding. */
+@media (min-width: 1024px) {
+  .landing-page .site-header {
+    top: 14px;
+  }
+
+  .landing-page .nav-shell {
+    display: grid;
+    width: min(calc(100% - 40px), var(--container));
+    min-height: 54px;
+    grid-template-columns: minmax(156px, 1fr) auto minmax(156px, 1fr);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .landing-page .desktop-nav {
+    display: flex;
+    height: 52px;
+    gap: clamp(14px, 1.8vw, 28px);
+    padding-inline: clamp(17px, 2vw, 25px);
+    font-size: 0.9375rem;
+  }
+
+  .landing-page .nav-cta {
+    display: inline-flex;
+    min-height: 48px;
+    padding-inline: 18px;
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+
+  .landing-page .menu-button,
+  .landing-page .mobile-menu {
+    display: none !important;
+  }
+
+  .landing-page .hero-grid {
+    padding-top: 132px;
+  }
+
+  .landing-page .hero h1 {
+    max-width: 18ch;
+    font-size: clamp(2.75rem, 3.7vw, 3.125rem);
+  }
+
+  .landing-page .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .landing-page .workflow-scroll {
+    position: relative;
+  }
+
+  .landing-page .how-sticky {
+    position: sticky;
+    top: 136px;
+    display: block;
+    height: 585px;
+    min-height: 585px;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  .landing-page .how-window {
+    height: 525px;
+    overflow: hidden;
+  }
+
+  .landing-page .how-track {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(22px, 3vw, 56px);
+  }
+
+  .landing-page .how-mobile-timeline,
+  .landing-page .how-card__step {
+    display: none;
+  }
+
+  .landing-page .how-card {
+    display: grid;
+    grid-template-rows: 68px minmax(0, 318px) auto;
+    row-gap: 14px;
+  }
+
+  .landing-page .process-card {
+    height: 318px;
+    aspect-ratio: auto;
+  }
+
+  .landing-page .how-card h3 {
+    display: flex;
+    min-height: 68px;
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  .landing-page .how-card > p {
+    margin: 0 8px;
+    text-align: center;
+  }
+
+  .landing-page .step-line {
+    display: grid;
+  }
+
+  .landing-page .workflow-triggers {
+    display: block;
+  }
+
+  .landing-page .workflow-trigger {
+    height: clamp(620px, 72vh, 780px);
+  }
+
+  .landing-page .js:not(.reduced-motion) .workflow-scroll.is-motion-ready .how-card,
+  .js:not(.reduced-motion) .landing-page .workflow-scroll.is-motion-ready .how-card {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(48px) scale(0.985);
+    transform-origin: 50% 55%;
+  }
+
+  .landing-page .step-line i {
+    width: 100%;
+    transform: scaleX(var(--desktop-step-progress, 0));
+    transform-origin: 0 50%;
+    will-change: transform;
+  }
+
+  .landing-page .step-line span,
+  .landing-page .step-line span:first-child {
+    border-color: rgba(122, 139, 132, 0.24);
+    background: #06251c;
+    color: var(--muted);
+  }
+
+  .landing-page .step-line span.is-active {
+    border-color: rgba(var(--accent-rgb), 0.62);
+    background: #072a1e;
+    color: #fff;
+  }
+
+  .landing-page .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-page .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-page .cta-panel {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+
+  .landing-page .footer-grid {
+    grid-template-columns: 2.2fr repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Large desktop editorial hero: exactly three deliberate headline lines. */
+@media (min-width: 1280px) {
+  .landing-page .hero,
+  .landing-page .hero-grid {
+    min-height: 820px;
+  }
+
+  .landing-page .hero {
+    padding-bottom: 0;
+  }
+
+  .landing-page .hero-grid {
+    grid-template-columns: 51% 49%;
+    align-items: center;
+    padding-top: 72px;
+  }
+
+  .landing-page .hero-copy {
+    top: 24px;
+    width: min(100%, 636px);
+  }
+
+  .landing-page .hero h1 {
+    max-width: none;
+    font-size: clamp(2.625rem, 3vw, 3rem);
+    text-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .landing-page .hero-break {
+    display: block;
+  }
+
+  .landing-page .hero-visual {
+    position: absolute;
+    top: 205px;
+    left: 51%;
+    width: min(1055px, 74vw);
+    margin-top: 0;
+  }
+
+  .landing-page .pricing-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639.98px) {
+  .landing-page .command-grid[data-layout] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .landing-page .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .landing-page .footer-brand {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .landing-page {
+    --lp-gutter: 14px;
+  }
+
+  .landing-page .hero h1 {
+    font-size: 2.0625rem;
+  }
+
+  .landing-page .how-card,
+  .landing-page .how-card:first-child,
+  .landing-page .how-card:last-child {
+    padding-left: 42px;
+  }
+
+  .landing-page .how-card__step {
+    width: 32px;
+    height: 32px;
+  }
+
+  .landing-page .how-mobile-timeline {
+    left: 15.5px;
+  }
+
+  .landing-page .input-shell {
+    display: grid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-page .workflow-triggers {
+    display: none;
+  }
+
+  .landing-page .workflow-scroll,
+  .landing-page .how-sticky,
+  .landing-page .how-window {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .landing-page .how-sticky {
+    position: static;
+    background: transparent;
+  }
+
+  .landing-page .how-card {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .landing-page .how-mobile-timeline i {
+    transform: scaleY(1);
+  }
+}
