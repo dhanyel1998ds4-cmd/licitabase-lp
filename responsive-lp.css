@@ -464,16 +464,36 @@ html[data-theme="dark"] .landing-page .platform-orbit-light {
   }
 
   .landing-page .pricing-cycle__control {
-    width: 100%;
+    width: min(100%, 390px);
+    justify-content: center;
+    gap: 3px;
+    margin-inline: auto;
   }
 
   .landing-page .pricing-cycle button {
     min-width: 0;
-    flex: 1 1 50%;
+    min-height: 44px;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 14px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .landing-page .pricing-cycle button:first-child {
+    flex: 0 1 42%;
+  }
+
+  .landing-page .pricing-cycle button:last-child {
+    flex: 1 1 auto;
   }
 
   .landing-page .pricing-cycle__saving {
-    display: none;
+    display: inline-flex;
+    padding: 3px 7px;
+    font-size: 0.5rem;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
   .landing-page .pricing-card {
@@ -1039,6 +1059,21 @@ html[data-theme="dark"] .landing-page .platform-orbit-light {
 
   .landing-page .how-mobile-timeline {
     left: 15.5px;
+  }
+
+  .landing-page .pricing-cycle button {
+    gap: 5px;
+    padding-inline: 10px;
+    font-size: 0.8125rem;
+  }
+
+  .landing-page .pricing-cycle button:first-child {
+    flex-basis: 38%;
+  }
+
+  .landing-page .pricing-cycle__saving {
+    padding-inline: 6px;
+    font-size: 0.4375rem;
   }
 
   .landing-page .input-shell {
