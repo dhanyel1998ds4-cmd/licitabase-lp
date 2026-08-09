@@ -804,11 +804,10 @@ const commandCenterIcons = {
     <path class="command-icon__primary" d="M9 16h3.5M10.5 14l2 2-2 2M19.5 16H23M21 14l2 2-2 2"></path>
     <circle class="command-icon__spark" cx="5.5" cy="16" r="1.7"></circle><circle class="command-icon__spark" cx="16" cy="16" r="1.7"></circle><circle class="command-icon__spark" cx="26.5" cy="16" r="1.7"></circle>`,
   'bid-bot': `
-    <path class="command-icon__wash" d="m5 9 5-5 9 9-5 5Z"></path>
-    <path class="command-icon__secondary" d="m5 9 5-5 9 9-5 5Z"></path>
-    <g class="command-icon__primary"><path d="M16 15 26 25M18 28h11"></path><path d="M8 12 4 16M17 9l4-4"></path></g>
-    <g class="command-icon__secondary"><path d="M23 6c2.5.8 4.2 2.5 5 5M23 10c1 .4 1.6 1 2 2"></path></g>
-    <circle class="command-icon__spark" cx="26" cy="5" r="1.5"></circle>`,
+    <rect class="command-icon__wash" x="6" y="9" width="20" height="18" rx="6"></rect>
+    <g class="command-icon__secondary"><path d="M16 4v5M6 15H3v7h3M26 15h3v7h-3M10 27v2M22 27v2"></path><circle cx="16" cy="3" r="1.5"></circle></g>
+    <g class="command-icon__primary"><rect x="6" y="9" width="20" height="18" rx="6"></rect><circle cx="12.5" cy="17" r="1.8"></circle><circle cx="19.5" cy="17" r="1.8"></circle><path d="M11.5 22c2.6 2 6.4 2 9 0"></path></g>
+    <circle class="command-icon__spark" cx="19.5" cy="17" r="1.05"></circle>`,
   documents: `
     <path class="command-icon__wash" d="M8 4h14l6 6v18H8Z"></path>
     <path class="command-icon__secondary" d="M4 9v19h19M8 4h14l6 6v18H8Z"></path>
