@@ -8,7 +8,7 @@
       audience: 'Para empresas que desejam estruturar a busca e o monitoramento de licitações.',
       prices: {
         monthly: { value: 99, total: '' },
-        annual: { value: 79, total: 'Cobrado anualmente: R$ 948' },
+        annual: { value: 79, total: 'Cobrado anualmente: R$\u00A0948' },
       },
       features: [
         { icon: 'radar', label: 'Busca ilimitada de licitações' },
@@ -29,7 +29,7 @@
       badge: 'Mais escolhido',
       prices: {
         monthly: { value: 299, total: '' },
-        annual: { value: 199, total: 'Cobrado anualmente: R$ 2.388' },
+        annual: { value: 199, total: 'Cobrado anualmente: R$\u00A02.388' },
       },
       features: [
         { icon: 'layers', label: 'Tudo do plano Essencial' },
@@ -50,7 +50,7 @@
       audience: 'Para empresas com alto volume, múltiplos CNPJs ou equipes maiores.',
       prices: {
         monthly: { value: 997, total: '' },
-        annual: { value: 747, total: 'Cobrado anualmente: R$ 8.964' },
+        annual: { value: 747, total: 'Cobrado anualmente: R$\u00A08.964' },
       },
       features: [
         { icon: 'layers', label: 'Tudo do plano Profissional' },
