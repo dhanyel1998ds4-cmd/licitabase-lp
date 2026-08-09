@@ -236,11 +236,18 @@ html[data-theme="light"] .pricing-compare-page {
   }
 
   .pricing-compare-page .comparison-plan-head__badge {
-    min-height: 17px;
-    margin: -7px 0 5px;
-    padding: 3px 5px;
+    min-height: 22px;
+    gap: 4px;
+    margin: -10px 0 7px;
+    padding: 3px 7px 3px 4px;
     font-size: 0.4375rem;
     white-space: nowrap;
+  }
+
+  .pricing-compare-page .comparison-plan-head__badge::before {
+    width: 14px;
+    height: 14px;
+    font-size: 7px;
   }
 
   .pricing-compare-page .comparison-plan-price {
@@ -477,5 +484,21 @@ html[data-theme="light"] .pricing-compare-page {
 
   .pricing-compare-page .comparison-feature-row {
     padding-inline: 9px;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .pricing-compare-page .comparison-plan-head__badge {
+    min-height: 20px;
+    gap: 3px;
+    padding: 3px 6px 3px 3px;
+    font-size: 0.375rem;
+    letter-spacing: 0.02em;
+  }
+
+  .pricing-compare-page .comparison-plan-head__badge::before {
+    width: 12px;
+    height: 12px;
+    font-size: 6px;
   }
 }
