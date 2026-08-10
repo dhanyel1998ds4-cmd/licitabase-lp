@@ -332,6 +332,7 @@ function setupCounters() {
 function setupWorkflow() {
   const stage = document.querySelector('#step-trigger-activate');
   const triggers = [stage, document.querySelector('#step-trigger-1'), document.querySelector('#step-trigger-2')];
+  const workflow = stage?.closest('.workflow-scroll');
   const track = document.querySelector('[data-how-track]');
   const cards = Array.from(document.querySelectorAll('.how-card'));
   const progressLine = document.querySelector('.step-line i');
@@ -340,6 +341,7 @@ function setupWorkflow() {
   const mobileMarkers = Array.from(document.querySelectorAll('.how-card__step'));
   if (
     !stage
+    || !workflow
     || !track
     || !progressLine
     || !mobileRail
@@ -349,10 +351,13 @@ function setupWorkflow() {
     || mobileMarkers.length !== cards.length
   ) return;
 
-  stage.closest('.workflow-scroll')?.classList.add('is-motion-ready');
+  workflow.classList.add('is-motion-ready');
 
   let thresholds = [];
   let desktopRevealDistances = [];
+  let desktopTimelineStart = 0;
+  let desktopTimelineEnd = 0;
+  let desktopWorkflowTop = 0;
   let mobileMarkerCenters = [];
   let mobileTimelineGeometry = null;
   let scheduled = false;
@@ -412,19 +417,30 @@ function setupWorkflow() {
 
   const measure = () => {
     if (desktopWorkflowQuery.matches && !reduceMotion) {
-      thresholds = triggers.map((trigger) => {
-        const documentTop = trigger.getBoundingClientRect().top + window.scrollY;
-        return documentTop - (window.innerHeight - trigger.offsetHeight * 0.5);
-      });
-      desktopRevealDistances = thresholds.map((threshold, index) => {
-        const previousInterval = index > 0 ? threshold - thresholds[index - 1] : 0;
-        const nextInterval = index < thresholds.length - 1 ? thresholds[index + 1] - threshold : previousInterval;
-        const availableInterval = Math.max(previousInterval, nextInterval, 1);
-        return Math.min(250, Math.max(170, availableInterval * 0.28));
-      });
+      const workflowRect = workflow.getBoundingClientRect();
+      const workflowTop = workflowRect.top + window.scrollY;
+      const stickyTop = Number.parseFloat(window.getComputedStyle(stage).top) || 0;
+      const stickyStart = workflowTop - stickyTop;
+      const stickyEnd = workflowTop + workflow.offsetHeight - stage.offsetHeight - stickyTop;
+      const availableDistance = Math.max(stickyEnd - stickyStart, 1);
+      const entryDistance = Math.min(72, availableDistance * 0.06);
+      const settleDistance = Math.min(320, Math.max(220, availableDistance * 0.25));
+      const firstThreshold = stickyStart + entryDistance;
+      const lastThreshold = Math.max(firstThreshold + 2, stickyEnd - settleDistance);
+      const interval = Math.max((lastThreshold - firstThreshold) / 2, 1);
+      const revealDistance = Math.min(320, Math.max(220, interval * 0.58));
+
+      thresholds = [firstThreshold, firstThreshold + interval, lastThreshold];
+      desktopRevealDistances = thresholds.map(() => revealDistance);
+      desktopTimelineStart = stickyStart;
+      desktopTimelineEnd = stickyEnd;
+      desktopWorkflowTop = workflowTop;
     } else {
       thresholds = [];
       desktopRevealDistances = [];
+      desktopTimelineStart = 0;
+      desktopTimelineEnd = 0;
+      desktopWorkflowTop = 0;
     }
     measureMobileTimeline();
   };
@@ -435,6 +451,8 @@ function setupWorkflow() {
   };
 
   const updateDesktopWorkflow = () => {
+    const currentWorkflowTop = workflow.getBoundingClientRect().top + window.scrollY;
+    if (Math.abs(currentWorkflowTop - desktopWorkflowTop) > 1) measure();
     if (thresholds.length !== cards.length) measure();
     if (thresholds.length !== cards.length) return;
 
@@ -442,7 +460,7 @@ function setupWorkflow() {
     const markerPositions = [1 / 6, 1 / 2, 5 / 6];
     const leadingSegment = segmentProgress(
       scrollPosition,
-      thresholds[0] - desktopRevealDistances[0],
+      desktopTimelineStart,
       thresholds[0],
     );
     const firstSegment = segmentProgress(scrollPosition, thresholds[0], thresholds[1]);
@@ -450,7 +468,7 @@ function setupWorkflow() {
     const trailingSegment = segmentProgress(
       scrollPosition,
       thresholds[2],
-      thresholds[2] + desktopRevealDistances[2],
+      desktopTimelineEnd,
     );
     const lineProgress = scrollPosition < thresholds[0]
       ? leadingSegment * markerPositions[0]
@@ -477,9 +495,9 @@ function setupWorkflow() {
         thresholds[index] + desktopRevealDistances[index],
       );
       const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
-      const translateY = (1 - easedProgress) * 48;
-      const scale = 0.985 + easedProgress * 0.015;
-      const blur = (1 - easedProgress) * 4;
+      const translateY = (1 - easedProgress) * 56;
+      const scale = 0.975 + easedProgress * 0.025;
+      const blur = (1 - easedProgress) * 6;
 
       card.style.opacity = easedProgress.toFixed(4);
       card.style.transform = `translateY(${translateY.toFixed(2)}px) scale(${scale.toFixed(4)})`;
@@ -549,15 +567,16 @@ function setupWorkflow() {
   };
   window.addEventListener('scroll', requestUpdate, { passive: true });
   window.addEventListener('resize', reset);
+  window.addEventListener('load', reset, { once: true });
   desktopWorkflowQuery.addEventListener?.('change', reset);
   phoneQuery.addEventListener?.('change', reset);
   if ('ResizeObserver' in window) {
     const timelineResizeObserver = new ResizeObserver(() => {
-      if (!phoneQuery.matches) return;
-      measureMobileTimeline();
+      measure();
       requestUpdate();
     });
     timelineResizeObserver.observe(track);
+    timelineResizeObserver.observe(workflow);
   }
   document.fonts?.ready.then(reset).catch(() => {});
   track.querySelectorAll('img').forEach((image) => {
